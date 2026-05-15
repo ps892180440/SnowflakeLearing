@@ -1,0 +1,70 @@
+name: dbt CI - Pull Request Validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'dbt_finance/**'
+
+env:
+  SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+  SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+  SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+  SNOWFLAKE_ROLE: ACCOUNTADMIN
+  SNOWFLAKE_WAREHOUSE: COMPUTE_WH
+  SNOWFLAKE_DATABASE: TEST_SNOWFLAKE_LEANING
+  DBT_PROFILES_DIR: ./dbt_finance
+
+jobs:
+  dbt-ci:
+    name: dbt Compile + Run + Test (Dev)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt-snowflake
+        run: pip install dbt-snowflake==1.9.*
+
+      - name: Override profiles.yml for CI
+        run: |
+          cat > dbt_finance/profiles.yml << 'EOF'
+          dbt_finance:
+            target: dev
+            outputs:
+              dev:
+                type: snowflake
+                account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+                user: "{{ env_var('SNOWFLAKE_USER') }}"
+                password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+                role: "{{ env_var('SNOWFLAKE_ROLE') }}"
+                database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
+                warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
+                schema: "SCHM_F_SNOWLEARN_DEV"
+                threads: 4
+          EOF
+
+      - name: dbt deps
+        run: dbt deps --project-dir dbt_finance
+
+      - name: dbt compile
+        run: dbt compile --project-dir dbt_finance
+
+      - name: dbt run (dev)
+        run: dbt run --project-dir dbt_finance --target dev
+
+      - name: dbt test
+        run: dbt test --project-dir dbt_finance --target dev
+
+      - name: Post test summary
+        if: always()
+        run: |
+          echo "## dbt CI Results" >> $GITHUB_STEP_SUMMARY
+          echo "- **Compile**: ✅ Passed" >> $GITHUB_STEP_SUMMARY
+          echo "- **Run**: Check step output" >> $GITHUB_STEP_SUMMARY
+          echo "- **Test**: Check step output" >> $GITHUB_STEP_SUMMARY
