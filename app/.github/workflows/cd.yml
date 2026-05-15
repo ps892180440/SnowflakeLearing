@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'dbt_finance/**'
+      - 'app/dbt_finance/**'
 
 env:
   SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
@@ -33,7 +33,7 @@ jobs:
 
       - name: Override profiles.yml for CD
         run: |
-          cat > dbt_finance/profiles.yml << 'EOF'
+          cat > app/dbt_finance/profiles.yml << 'EOF'
           dbt_finance:
             target: prod
             outputs:
@@ -50,13 +50,13 @@ jobs:
           EOF
 
       - name: dbt deps
-        run: dbt deps --project-dir dbt_finance
+        run: dbt deps --project-dir app/dbt_finance
 
       - name: dbt run (prod)
-        run: dbt run --project-dir dbt_finance --target prod
+        run: dbt run --project-dir app/dbt_finance --target prod
 
       - name: dbt test (prod)
-        run: dbt test --project-dir dbt_finance --target prod
+        run: dbt test --project-dir app/dbt_finance --target prod
 
       - name: Post deploy summary
         if: always()

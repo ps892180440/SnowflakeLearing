@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'dbt_finance/**'
+      - 'app/dbt_finance/**'
 
 env:
   SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
@@ -13,7 +13,7 @@ env:
   SNOWFLAKE_ROLE: ACCOUNTADMIN
   SNOWFLAKE_WAREHOUSE: COMPUTE_WH
   SNOWFLAKE_DATABASE: TEST_SNOWFLAKE_LEANING
-  DBT_PROFILES_DIR: ./dbt_finance
+  DBT_PROFILES_DIR: ./app/dbt_finance
 
 jobs:
   dbt-ci:
@@ -33,7 +33,7 @@ jobs:
 
       - name: Override profiles.yml for CI
         run: |
-          cat > dbt_finance/profiles.yml << 'EOF'
+          cat > app/dbt_finance/profiles.yml << 'EOF'
           dbt_finance:
             target: dev
             outputs:
@@ -50,16 +50,16 @@ jobs:
           EOF
 
       - name: dbt deps
-        run: dbt deps --project-dir dbt_finance
+        run: dbt deps --project-dir app/dbt_finance
 
       - name: dbt compile
-        run: dbt compile --project-dir dbt_finance
+        run: dbt compile --project-dir app/dbt_finance
 
       - name: dbt run (dev)
-        run: dbt run --project-dir dbt_finance --target dev
+        run: dbt run --project-dir app/dbt_finance --target dev
 
       - name: dbt test
-        run: dbt test --project-dir dbt_finance --target dev
+        run: dbt test --project-dir app/dbt_finance --target dev
 
       - name: Post test summary
         if: always()
