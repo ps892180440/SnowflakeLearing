@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: snowlearn
+    database: TEST_SNOWFLAKE_LEANING
+    schema: SCHM_F_SNOWLEARN_01
+    description: "Snowflake learning demo source data"
+    tables:
+      - name: DIM_ACCOUNT
+        description: "Account dimension table with client and risk info"
+        columns:
+          - name: ACCOUNT_KEY
+            description: "Auto-increment surrogate key"
+          - name: ACCOUNT_ID
+            description: "Business account identifier"
+          - name: CLIENT_NAME
+            description: "Client name"
+          - name: RISK_LEVEL
+            description: "Risk classification (e.g. Low, Medium, High)"
+          - name: ACCOUNT_TYPE
+            description: "Type of account"
+          - name: OPEN_DATE
+            description: "Date when the account was opened"
+          - name: IS_ACTIVE
+            description: "Whether the account is currently active"
+          - name: ETL_UPDATED_AT
+            description: "ETL last update timestamp"

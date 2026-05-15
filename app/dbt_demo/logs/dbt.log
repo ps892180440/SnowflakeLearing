@@ -1,0 +1,700 @@
+
+
+============================== 22:51:39.827239 | 7bdfa19f-7ef4-4a42-bd6d-64762df6605e ==============================
+[0m22:51:39.827239 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m22:51:39.828131 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m22:51:39.880719 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m22:51:40.099189 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m22:51:40.511310 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m22:51:40.512635 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m22:51:42.107637 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m22:51:42.109670 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m22:51:42.140614 [info ] [Dummy-1   ]: Found 2 models, 6 data tests, 1 source, 474 macros
+[0m22:51:42.142802 [info ] [Dummy-1   ]: 
+[0m22:51:42.143349 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m22:51:42.143788 [info ] [Dummy-1   ]: 
+[0m22:51:42.144474 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m22:51:42.149825 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01'
+[0m22:51:42.233473 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:51:42.234067 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m22:51:42.234515 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:51:42.707393 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.473 seconds
+[0m22:51:42.712090 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:51:42.712672 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+show objects in TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01
+    limit 10000
+    
+;
+[0m22:51:42.787606 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.074 seconds
+[0m22:51:42.789973 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:51:42.790493 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m22:51:42.860458 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.069 seconds
+[0m22:51:42.869859 [debug] [Thread-2 (]: Began running node model.dbt_demo.stg_dim_account
+[0m22:51:42.870619 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01, now model.dbt_demo.stg_dim_account)
+[0m22:51:42.871138 [debug] [Thread-2 (]: Began compiling node model.dbt_demo.stg_dim_account
+[0m22:51:42.964574 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_demo.stg_dim_account"
+[0m22:51:42.965531 [debug] [Thread-2 (]: Began executing node model.dbt_demo.stg_dim_account
+[0m22:51:42.966384 [debug] [Thread-2 (]: Finished running node model.dbt_demo.stg_dim_account
+[0m22:51:42.967623 [debug] [Thread-4 (]: Began running node model.dbt_demo.mart_active_accounts
+[0m22:51:42.968374 [debug] [Thread-5 (]: Began running node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:51:42.968965 [debug] [Thread-3 (]: Began running node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:51:42.969528 [debug] [Thread-2 (]: Began running node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:51:42.970407 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_demo.mart_active_accounts'
+[0m22:51:42.971071 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f'
+[0m22:51:42.971709 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35'
+[0m22:51:42.972261 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_demo.stg_dim_account, now test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8)
+[0m22:51:42.972776 [debug] [Thread-4 (]: Began compiling node model.dbt_demo.mart_active_accounts
+[0m22:51:42.973290 [debug] [Thread-5 (]: Began compiling node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:51:42.973813 [debug] [Thread-3 (]: Began compiling node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:51:42.974294 [debug] [Thread-2 (]: Began compiling node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:51:42.978985 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_demo.mart_active_accounts"
+[0m22:51:42.990251 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f"
+[0m22:51:42.996676 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35"
+[0m22:51:43.006790 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8"
+[0m22:51:43.008126 [debug] [Thread-4 (]: Began executing node model.dbt_demo.mart_active_accounts
+[0m22:51:43.008907 [debug] [Thread-5 (]: Began executing node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:51:43.009720 [debug] [Thread-3 (]: Began executing node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:51:43.010576 [debug] [Thread-4 (]: Finished running node model.dbt_demo.mart_active_accounts
+[0m22:51:43.011080 [debug] [Thread-2 (]: Began executing node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:51:43.011810 [debug] [Thread-5 (]: Finished running node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:51:43.012574 [debug] [Thread-3 (]: Finished running node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:51:43.013549 [debug] [Thread-4 (]: Began running node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:51:43.014273 [debug] [Thread-2 (]: Finished running node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:51:43.014848 [debug] [Thread-5 (]: Began running node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:51:43.015452 [debug] [Thread-3 (]: Began running node test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4
+[0m22:51:43.016149 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_demo.mart_active_accounts, now test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6)
+[0m22:51:43.016884 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f, now test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901)
+[0m22:51:43.017459 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35, now test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4)
+[0m22:51:43.018038 [debug] [Thread-4 (]: Began compiling node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:51:43.018550 [debug] [Thread-5 (]: Began compiling node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:51:43.019005 [debug] [Thread-3 (]: Began compiling node test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4
+[0m22:51:43.025235 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6"
+[0m22:51:43.030638 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901"
+[0m22:51:43.036405 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4"
+[0m22:51:43.037487 [debug] [Thread-4 (]: Began executing node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:51:43.038376 [debug] [Thread-5 (]: Began executing node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:51:43.039415 [debug] [Thread-4 (]: Finished running node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:51:43.039902 [debug] [Thread-3 (]: Began executing node test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4
+[0m22:51:43.040755 [debug] [Thread-5 (]: Finished running node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:51:43.041779 [debug] [Thread-3 (]: Finished running node test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4
+[0m22:51:43.044108 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m22:51:43.044639 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8' was properly closed.
+[0m22:51:43.045062 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6' was properly closed.
+[0m22:51:43.045494 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901' was properly closed.
+[0m22:51:43.045907 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4' was properly closed.
+[0m22:51:43.047385 [debug] [Dummy-1   ]: Command end result
+[0m22:51:43.071326 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m22:51:43.073269 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m22:51:43.080057 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m22:51:43.081676 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 3.326784, "process_in_blocks": "0", "process_kernel_time": 0.98, "process_mem_max_rss": "499324", "process_out_blocks": "0", "process_user_time": 4.92}
+[0m22:51:43.082284 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 22:51:43.082028 after 3.33 seconds
+[0m22:51:43.082790 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 22:52:00.038664 | 5928c726-e765-4c2d-9e01-53d42f0fe6a3 ==============================
+[0m22:52:00.038664 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m22:52:00.039599 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m22:52:00.094175 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m22:52:00.318294 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m22:52:00.732306 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m22:52:00.927105 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:52:00.927692 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:52:01.135071 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m22:52:01.137051 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m22:52:01.178805 [info ] [Dummy-1   ]: Found 2 models, 6 data tests, 1 source, 474 macros
+[0m22:52:01.181026 [info ] [Dummy-1   ]: 
+[0m22:52:01.181597 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m22:52:01.182053 [info ] [Dummy-1   ]: 
+[0m22:52:01.182791 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m22:52:01.188679 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TEST_SNOWFLAKE_LEANING'
+[0m22:52:01.272277 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING"
+[0m22:52:01.272878 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING"} */
+show terse schemas in database TEST_SNOWFLAKE_LEANING
+    limit 10000
+[0m22:52:01.273363 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:52:01.816651 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.543 seconds
+[0m22:52:01.820397 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01'
+[0m22:52:01.833978 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:52:01.834556 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m22:52:01.834990 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:52:02.456262 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.621 seconds
+[0m22:52:02.460943 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:52:02.461499 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+show objects in TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01
+    limit 10000
+    
+;
+[0m22:52:02.581413 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.119 seconds
+[0m22:52:02.583634 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:52:02.584161 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m22:52:02.719583 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.135 seconds
+[0m22:52:02.728118 [debug] [Thread-2 (]: Began running node model.dbt_demo.stg_dim_account
+[0m22:52:02.728939 [info ] [Thread-2 (]: 1 of 2 START sql view model SCHM_F_SNOWLEARN_01.stg_dim_account ................ [RUN]
+[0m22:52:02.729634 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01, now model.dbt_demo.stg_dim_account)
+[0m22:52:02.730154 [debug] [Thread-2 (]: Began compiling node model.dbt_demo.stg_dim_account
+[0m22:52:02.738704 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_demo.stg_dim_account"
+[0m22:52:02.739521 [debug] [Thread-2 (]: Began executing node model.dbt_demo.stg_dim_account
+[0m22:52:02.777526 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_demo.stg_dim_account"
+[0m22:52:02.778973 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_demo.stg_dim_account"
+[0m22:52:02.779515 [debug] [Thread-2 (]: On model.dbt_demo.stg_dim_account: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "model.dbt_demo.stg_dim_account"} */
+create or replace   view TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_account
+  
+   as (
+    select
+    account_key,
+    account_id,
+    client_name,
+    risk_level,
+    account_type,
+    open_date,
+    is_active,
+    etl_updated_at
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.DIM_ACCOUNT
+  );
+[0m22:52:02.779999 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:52:03.684784 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.905 seconds
+[0m22:52:03.709225 [info ] [Thread-2 (]: 1 of 2 OK created sql view model SCHM_F_SNOWLEARN_01.stg_dim_account ........... [[32mSUCCESS 1[0m in 0.98s]
+[0m22:52:03.710061 [debug] [Thread-2 (]: Finished running node model.dbt_demo.stg_dim_account
+[0m22:52:03.711434 [debug] [Thread-4 (]: Began running node model.dbt_demo.mart_active_accounts
+[0m22:52:03.712279 [info ] [Thread-4 (]: 2 of 2 START sql table model SCHM_F_SNOWLEARN_01.mart_active_accounts .......... [RUN]
+[0m22:52:03.712994 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_demo.mart_active_accounts'
+[0m22:52:03.713498 [debug] [Thread-4 (]: Began compiling node model.dbt_demo.mart_active_accounts
+[0m22:52:03.719622 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_demo.mart_active_accounts"
+[0m22:52:03.720410 [debug] [Thread-4 (]: Began executing node model.dbt_demo.mart_active_accounts
+[0m22:52:03.746197 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_demo.mart_active_accounts"
+[0m22:52:03.747788 [debug] [Thread-4 (]: Using snowflake connection "model.dbt_demo.mart_active_accounts"
+[0m22:52:03.748439 [debug] [Thread-4 (]: On model.dbt_demo.mart_active_accounts: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "model.dbt_demo.mart_active_accounts"} */
+create or replace transient table TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.mart_active_accounts
+         as
+        (select
+    account_id,
+    client_name,
+    risk_level,
+    account_type,
+    open_date,
+    datediff('day', open_date, current_date()) as account_age_days,
+    case
+        when datediff('day', open_date, current_date()) > 365 then 'Mature'
+        when datediff('day', open_date, current_date()) > 90 then 'Established'
+        else 'New'
+    end as account_maturity
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_account
+where is_active = true
+        );
+[0m22:52:03.748964 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:52:05.400741 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.652 seconds
+[0m22:52:05.403737 [info ] [Thread-4 (]: 2 of 2 OK created sql table model SCHM_F_SNOWLEARN_01.mart_active_accounts ..... [[32mSUCCESS 1[0m in 1.69s]
+[0m22:52:05.404510 [debug] [Thread-4 (]: Finished running node model.dbt_demo.mart_active_accounts
+[0m22:52:05.406963 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m22:52:05.407497 [debug] [Dummy-1   ]: Connection 'list_TEST_SNOWFLAKE_LEANING' was properly closed.
+[0m22:52:05.407928 [debug] [Dummy-1   ]: Connection 'model.dbt_demo.stg_dim_account' was properly closed.
+[0m22:52:05.408462 [debug] [Dummy-1   ]: Connection 'model.dbt_demo.mart_active_accounts' was properly closed.
+[0m22:52:05.408935 [info ] [Dummy-1   ]: 
+[0m22:52:05.409432 [info ] [Dummy-1   ]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 4.23 seconds (4.23s).
+[0m22:52:05.410363 [debug] [Dummy-1   ]: Command end result
+[0m22:52:05.433541 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m22:52:05.435413 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m22:52:05.441572 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m22:52:05.442056 [info ] [Dummy-1   ]: 
+[0m22:52:05.442676 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m22:52:05.443141 [info ] [Dummy-1   ]: 
+[0m22:52:05.443633 [info ] [Dummy-1   ]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m22:52:05.445327 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.481286, "process_in_blocks": "0", "process_kernel_time": 0.79, "process_mem_max_rss": "450964", "process_out_blocks": "0", "process_user_time": 4.11}
+[0m22:52:05.445951 [debug] [Dummy-1   ]: Command `cli run` succeeded at 22:52:05.445699 after 5.48 seconds
+[0m22:52:05.446462 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 22:52:30.062204 | eebc00d6-c03d-4b4f-a248-83f757ac89cc ==============================
+[0m22:52:30.062204 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m22:52:30.063140 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/tmp/dbt/', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m22:52:30.119114 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m22:52:30.348328 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m22:52:30.767259 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m22:52:30.961265 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:52:30.961809 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:52:31.164431 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m22:52:31.166533 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m22:52:31.224843 [info ] [Dummy-1   ]: Found 2 models, 6 data tests, 1 source, 474 macros
+[0m22:52:31.227289 [info ] [Dummy-1   ]: 
+[0m22:52:31.227832 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m22:52:31.228381 [info ] [Dummy-1   ]: 
+[0m22:52:31.229146 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m22:52:31.234743 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01'
+[0m22:52:31.323668 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:52:31.324278 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m22:52:31.324756 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:52:32.056814 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.732 seconds
+[0m22:52:32.061574 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:52:32.062131 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+show objects in TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01
+    limit 10000
+    
+;
+[0m22:52:32.210294 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.148 seconds
+[0m22:52:32.212641 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:52:32.213184 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m22:52:32.297852 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.084 seconds
+[0m22:52:32.308175 [debug] [Thread-2 (]: Began running node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:52:32.309201 [debug] [Thread-3 (]: Began running node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:52:32.309834 [debug] [Thread-4 (]: Began running node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:52:32.310418 [debug] [Thread-5 (]: Began running node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:52:32.311006 [info ] [Thread-2 (]: 1 of 6 START test accepted_values_mart_active_accounts_account_maturity__New__Established__Mature  [RUN]
+[0m22:52:32.311621 [info ] [Thread-3 (]: 2 of 6 START test not_null_mart_active_accounts_account_id ..................... [RUN]
+[0m22:52:32.312204 [info ] [Thread-4 (]: 3 of 6 START test not_null_stg_dim_account_account_id .......................... [RUN]
+[0m22:52:32.312806 [info ] [Thread-5 (]: 4 of 6 START test not_null_stg_dim_account_account_key ......................... [RUN]
+[0m22:52:32.313564 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01, now test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6)
+[0m22:52:32.314259 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901'
+[0m22:52:32.314900 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f'
+[0m22:52:32.315540 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35'
+[0m22:52:32.316064 [debug] [Thread-2 (]: Began compiling node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:52:32.316566 [debug] [Thread-3 (]: Began compiling node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:52:32.317023 [debug] [Thread-4 (]: Began compiling node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:52:32.317515 [debug] [Thread-5 (]: Began compiling node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:52:32.337560 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6"
+[0m22:52:32.350154 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901"
+[0m22:52:32.356406 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f"
+[0m22:52:32.362708 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35"
+[0m22:52:32.363822 [debug] [Thread-2 (]: Began executing node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:52:32.364686 [debug] [Thread-3 (]: Began executing node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:52:32.365613 [debug] [Thread-4 (]: Began executing node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:52:32.382677 [debug] [Thread-5 (]: Began executing node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:52:32.389359 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6"
+[0m22:52:32.393376 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901"
+[0m22:52:32.398644 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f"
+[0m22:52:32.402403 [debug] [Thread-5 (]: Writing runtime sql for node "test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35"
+[0m22:52:32.404429 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6"
+[0m22:52:32.405594 [debug] [Thread-3 (]: Using snowflake connection "test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901"
+[0m22:52:32.406848 [debug] [Thread-4 (]: Using snowflake connection "test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f"
+[0m22:52:32.407456 [debug] [Thread-2 (]: On test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        account_maturity as value_field,
+        count(*) as n_records
+
+    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.mart_active_accounts
+    group by account_maturity
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'New','Established','Mature'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m22:52:32.408470 [debug] [Thread-5 (]: Using snowflake connection "test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35"
+[0m22:52:32.409042 [debug] [Thread-3 (]: On test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select account_id
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.mart_active_accounts
+where account_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:52:32.409627 [debug] [Thread-4 (]: On test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select account_id
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_account
+where account_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:52:32.410165 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:52:32.410707 [debug] [Thread-5 (]: On test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select account_key
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_account
+where account_key is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:52:32.411236 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:52:32.411724 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:52:32.412348 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m22:52:33.122826 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.711 seconds
+[0m22:52:33.132889 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.722 seconds
+[0m22:52:33.133315 [info ] [Thread-4 (]: 3 of 6 PASS not_null_stg_dim_account_account_id ................................ [[32mPASS[0m in 0.82s]
+[0m22:52:33.134049 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.722 seconds
+[0m22:52:33.136231 [info ] [Thread-3 (]: 2 of 6 PASS not_null_mart_active_accounts_account_id ........................... [[32mPASS[0m in 0.82s]
+[0m22:52:33.137020 [debug] [Thread-4 (]: Finished running node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:52:33.139187 [info ] [Thread-5 (]: 4 of 6 PASS not_null_stg_dim_account_account_key ............................... [[32mPASS[0m in 0.82s]
+[0m22:52:33.139933 [debug] [Thread-3 (]: Finished running node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:52:33.140540 [debug] [Thread-4 (]: Began running node test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4
+[0m22:52:33.141423 [debug] [Thread-5 (]: Finished running node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:52:33.141979 [debug] [Thread-3 (]: Began running node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:52:33.142556 [info ] [Thread-4 (]: 5 of 6 START test unique_mart_active_accounts_account_id ....................... [RUN]
+[0m22:52:33.143280 [info ] [Thread-3 (]: 6 of 6 START test unique_stg_dim_account_account_key ........................... [RUN]
+[0m22:52:33.143927 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f, now test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4)
+[0m22:52:33.144496 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901, now test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8)
+[0m22:52:33.144981 [debug] [Thread-4 (]: Began compiling node test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4
+[0m22:52:33.145473 [debug] [Thread-3 (]: Began compiling node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:52:33.152148 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.742 seconds
+[0m22:52:33.154599 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4"
+[0m22:52:33.160271 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8"
+[0m22:52:33.162509 [info ] [Thread-2 (]: 1 of 6 PASS accepted_values_mart_active_accounts_account_maturity__New__Established__Mature  [[32mPASS[0m in 0.85s]
+[0m22:52:33.163546 [debug] [Thread-4 (]: Began executing node test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4
+[0m22:52:33.164281 [debug] [Thread-2 (]: Finished running node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:52:33.164845 [debug] [Thread-3 (]: Began executing node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:52:33.170221 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4"
+[0m22:52:33.174294 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8"
+[0m22:52:33.175663 [debug] [Thread-4 (]: Using snowflake connection "test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4"
+[0m22:52:33.176794 [debug] [Thread-3 (]: Using snowflake connection "test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8"
+[0m22:52:33.177338 [debug] [Thread-4 (]: On test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    account_id as unique_field,
+    count(*) as n_records
+
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.mart_active_accounts
+where account_id is not null
+group by account_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:52:33.177923 [debug] [Thread-3 (]: On test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    account_key as unique_field,
+    count(*) as n_records
+
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_account
+where account_key is not null
+group by account_key
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:52:33.178773 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:52:33.179287 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:52:33.749219 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.570 seconds
+[0m22:52:33.751833 [error] [Thread-4 (]: 5 of 6 FAIL 4 unique_mart_active_accounts_account_id ........................... [[31mFAIL 4[0m in 0.61s]
+[0m22:52:33.752621 [debug] [Thread-4 (]: Finished running node test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4
+[0m22:52:33.798955 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.619 seconds
+[0m22:52:33.801481 [info ] [Thread-3 (]: 6 of 6 PASS unique_stg_dim_account_account_key ................................. [[32mPASS[0m in 0.66s]
+[0m22:52:33.802390 [debug] [Thread-3 (]: Finished running node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:52:33.805624 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m22:52:33.806281 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6' was properly closed.
+[0m22:52:33.806733 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8' was properly closed.
+[0m22:52:33.807294 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.unique_mart_active_accounts_account_id.415ad7a0d4' was properly closed.
+[0m22:52:33.807840 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35' was properly closed.
+[0m22:52:33.808537 [info ] [Dummy-1   ]: 
+[0m22:52:33.809083 [info ] [Dummy-1   ]: Finished running 6 data tests in 0 hours 0 minutes and 2.58 seconds (2.58s).
+[0m22:52:33.810512 [debug] [Dummy-1   ]: Command end result
+[0m22:52:33.834751 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m22:52:33.836728 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m22:52:33.844142 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m22:52:33.844666 [info ] [Dummy-1   ]: 
+[0m22:52:33.845232 [info ] [Dummy-1   ]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m22:52:33.845692 [info ] [Dummy-1   ]: 
+[0m22:52:33.846254 [error] [Dummy-1   ]: [31mFailure in test unique_mart_active_accounts_account_id (models/schema.yml)[0m
+[0m22:52:33.846766 [error] [Dummy-1   ]:   Got 4 results, configured to fail if != 0
+[0m22:52:33.847162 [info ] [Dummy-1   ]: 
+[0m22:52:33.847602 [info ] [Dummy-1   ]:   compiled code at /tmp/dbt/target/compiled/dbt_demo/models/schema.yml/unique_mart_active_accounts_account_id.sql
+[0m22:52:33.848104 [info ] [Dummy-1   ]: 
+[0m22:52:33.848566 [info ] [Dummy-1   ]: Done. PASS=5 WARN=0 ERROR=1 SKIP=0 TOTAL=6
+[0m22:52:33.850251 [debug] [Dummy-1   ]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 3.8644807, "process_in_blocks": "0", "process_kernel_time": 0.82, "process_mem_max_rss": "464024", "process_out_blocks": "0", "process_user_time": 4.0}
+[0m22:52:33.850900 [debug] [Dummy-1   ]: Command `cli test` failed at 22:52:33.850632 after 3.87 seconds
+[0m22:52:33.851447 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 22:53:01.934665 | 7804dac0-9581-4de7-b5b8-8046e4f2e8d2 ==============================
+[0m22:53:01.934665 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m22:53:01.935567 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m22:53:01.990598 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m22:53:02.218744 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m22:53:02.636113 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m22:53:02.831975 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:53:02.832970 [debug] [Dummy-1   ]: Partial parsing: updated file: dbt_demo://models/schema.yml
+[0m22:53:03.571701 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m22:53:03.573803 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m22:53:03.629154 [info ] [Dummy-1   ]: Found 2 models, 5 data tests, 1 source, 474 macros
+[0m22:53:03.631503 [info ] [Dummy-1   ]: 
+[0m22:53:03.632046 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m22:53:03.632448 [info ] [Dummy-1   ]: 
+[0m22:53:03.633131 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m22:53:03.638693 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01'
+[0m22:53:03.723732 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:53:03.724292 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m22:53:03.724729 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:53:04.144441 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.420 seconds
+[0m22:53:04.149123 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:53:04.149700 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+show objects in TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01
+    limit 10000
+    
+;
+[0m22:53:04.237301 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.087 seconds
+[0m22:53:04.239765 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"
+[0m22:53:04.240318 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m22:53:04.305073 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.064 seconds
+[0m22:53:04.314614 [debug] [Thread-2 (]: Began running node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:53:04.316169 [debug] [Thread-3 (]: Began running node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:53:04.316808 [debug] [Thread-4 (]: Began running node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:53:04.317411 [debug] [Thread-5 (]: Began running node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:53:04.318035 [info ] [Thread-2 (]: 1 of 5 START test accepted_values_mart_active_accounts_account_maturity__New__Established__Mature  [RUN]
+[0m22:53:04.318648 [info ] [Thread-3 (]: 2 of 5 START test not_null_mart_active_accounts_account_id ..................... [RUN]
+[0m22:53:04.319189 [info ] [Thread-4 (]: 3 of 5 START test not_null_stg_dim_account_account_id .......................... [RUN]
+[0m22:53:04.319728 [info ] [Thread-5 (]: 4 of 5 START test not_null_stg_dim_account_account_key ......................... [RUN]
+[0m22:53:04.320403 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_01, now test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6)
+[0m22:53:04.321075 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901'
+[0m22:53:04.321730 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f'
+[0m22:53:04.322344 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35'
+[0m22:53:04.322879 [debug] [Thread-2 (]: Began compiling node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:53:04.323370 [debug] [Thread-3 (]: Began compiling node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:53:04.323840 [debug] [Thread-4 (]: Began compiling node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:53:04.324301 [debug] [Thread-5 (]: Began compiling node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:53:04.334962 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6"
+[0m22:53:04.346010 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901"
+[0m22:53:04.352562 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f"
+[0m22:53:04.358557 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35"
+[0m22:53:04.359687 [debug] [Thread-2 (]: Began executing node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:53:04.360558 [debug] [Thread-3 (]: Began executing node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:53:04.361410 [debug] [Thread-4 (]: Began executing node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:53:04.374303 [debug] [Thread-5 (]: Began executing node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:53:04.386639 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6"
+[0m22:53:04.390822 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901"
+[0m22:53:04.394816 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f"
+[0m22:53:04.398801 [debug] [Thread-5 (]: Writing runtime sql for node "test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35"
+[0m22:53:04.400519 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6"
+[0m22:53:04.401715 [debug] [Thread-3 (]: Using snowflake connection "test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901"
+[0m22:53:04.402810 [debug] [Thread-4 (]: Using snowflake connection "test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f"
+[0m22:53:04.403488 [debug] [Thread-2 (]: On test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        account_maturity as value_field,
+        count(*) as n_records
+
+    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.mart_active_accounts
+    group by account_maturity
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'New','Established','Mature'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m22:53:04.404442 [debug] [Thread-5 (]: Using snowflake connection "test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35"
+[0m22:53:04.405004 [debug] [Thread-3 (]: On test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select account_id
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.mart_active_accounts
+where account_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:53:04.405597 [debug] [Thread-4 (]: On test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select account_id
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_account
+where account_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:53:04.406166 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:53:04.406703 [debug] [Thread-5 (]: On test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select account_key
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_account
+where account_key is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:53:04.407254 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:53:04.407741 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:53:04.408500 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m22:53:04.937872 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.532 seconds
+[0m22:53:04.938739 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.530 seconds
+[0m22:53:04.945266 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.537 seconds
+[0m22:53:04.949077 [info ] [Thread-2 (]: 1 of 5 PASS accepted_values_mart_active_accounts_account_maturity__New__Established__Mature  [[32mPASS[0m in 0.63s]
+[0m22:53:04.951473 [info ] [Thread-5 (]: 4 of 5 PASS not_null_stg_dim_account_account_key ............................... [[32mPASS[0m in 0.63s]
+[0m22:53:04.953683 [info ] [Thread-4 (]: 3 of 5 PASS not_null_stg_dim_account_account_id ................................ [[32mPASS[0m in 0.63s]
+[0m22:53:04.954487 [debug] [Thread-2 (]: Finished running node test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6
+[0m22:53:04.955142 [debug] [Thread-5 (]: Finished running node test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35
+[0m22:53:04.955768 [debug] [Thread-4 (]: Finished running node test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f
+[0m22:53:04.956378 [debug] [Thread-2 (]: Began running node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:53:04.957317 [info ] [Thread-2 (]: 5 of 5 START test unique_stg_dim_account_account_key ........................... [RUN]
+[0m22:53:04.957935 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_demo.accepted_values_mart_active_accounts_account_maturity__New__Established__Mature.8623f5f9c6, now test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8)
+[0m22:53:04.958515 [debug] [Thread-2 (]: Began compiling node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:53:04.968040 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8"
+[0m22:53:04.969200 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.562 seconds
+[0m22:53:04.971635 [info ] [Thread-3 (]: 2 of 5 PASS not_null_mart_active_accounts_account_id ........................... [[32mPASS[0m in 0.65s]
+[0m22:53:04.972366 [debug] [Thread-2 (]: Began executing node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:53:04.973013 [debug] [Thread-3 (]: Finished running node test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901
+[0m22:53:04.977069 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8"
+[0m22:53:04.978767 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8"
+[0m22:53:04.979348 [debug] [Thread-2 (]: On test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_demo", "target_name": "dev", "node_id": "test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    account_key as unique_field,
+    count(*) as n_records
+
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_account
+where account_key is not null
+group by account_key
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:53:04.979857 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:53:05.942526 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.962 seconds
+[0m22:53:05.944927 [info ] [Thread-2 (]: 5 of 5 PASS unique_stg_dim_account_account_key ................................. [[32mPASS[0m in 0.99s]
+[0m22:53:05.945705 [debug] [Thread-2 (]: Finished running node test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8
+[0m22:53:05.948399 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m22:53:05.948995 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.unique_stg_dim_account_account_key.24f70477e8' was properly closed.
+[0m22:53:05.949428 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.not_null_mart_active_accounts_account_id.93de685901' was properly closed.
+[0m22:53:05.949822 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.not_null_stg_dim_account_account_id.e08784531f' was properly closed.
+[0m22:53:05.950223 [debug] [Dummy-1   ]: Connection 'test.dbt_demo.not_null_stg_dim_account_account_key.f12db6ab35' was properly closed.
+[0m22:53:05.950718 [info ] [Dummy-1   ]: 
+[0m22:53:05.951197 [info ] [Dummy-1   ]: Finished running 5 data tests in 0 hours 0 minutes and 2.32 seconds (2.32s).
+[0m22:53:05.952470 [debug] [Dummy-1   ]: Command end result
+[0m22:53:05.975650 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m22:53:05.977536 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m22:53:05.984211 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m22:53:05.984718 [info ] [Dummy-1   ]: 
+[0m22:53:05.985306 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m22:53:05.985756 [info ] [Dummy-1   ]: 
+[0m22:53:05.986217 [info ] [Dummy-1   ]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m22:53:05.987832 [debug] [Dummy-1   ]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 4.1288414, "process_in_blocks": "0", "process_kernel_time": 0.93, "process_mem_max_rss": "504736", "process_out_blocks": "0", "process_user_time": 4.55}
+[0m22:53:05.988521 [debug] [Dummy-1   ]: Command `cli test` succeeded at 22:53:05.988262 after 4.13 seconds
+[0m22:53:05.989050 [debug] [Dummy-1   ]: Flushing usage events
