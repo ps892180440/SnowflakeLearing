@@ -1,0 +1,12 @@
+dbt_finance:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: ""
+      user: ""
+      role: "ACCOUNTADMIN"
+      database: "TEST_SNOWFLAKE_LEANING"
+      warehouse: "COMPUTE_WH"
+      schema: "SCHM_F_SNOWLEARN_01"
+      threads: 4
