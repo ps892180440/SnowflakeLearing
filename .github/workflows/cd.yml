@@ -13,6 +13,7 @@ env:
   SNOWFLAKE_ROLE: ACCOUNTADMIN
   SNOWFLAKE_WAREHOUSE: COMPUTE_WH
   SNOWFLAKE_DATABASE: TEST_SNOWFLAKE_LEANING
+  DBT_PROFILES_DIR: ./app/dbt_finance
 
 jobs:
   dbt-cd:
@@ -33,7 +34,7 @@ jobs:
 
       - name: Override profiles.yml for CD
         run: |
-          cat > app/dbt_finance/profiles.yml << 'EOF'
+          cat > app/dbt_finance/profiles.yml <<'EOF'
           dbt_finance:
             target: prod
             outputs:
