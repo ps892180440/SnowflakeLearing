@@ -8,14 +8,5 @@ dbt_finance:
       role: "ACCOUNTADMIN"
       database: "TEST_SNOWFLAKE_LEANING"
       warehouse: "COMPUTE_WH"
-      schema: "SCHM_F_SNOWLEARN_DEV"
-      threads: 4
-    prod:
-      type: snowflake
-      account: ""
-      user: ""
-      role: "ACCOUNTADMIN"
-      database: "TEST_SNOWFLAKE_LEANING"
-      warehouse: "COMPUTE_WH"
       schema: "SCHM_F_SNOWLEARN_01"
       threads: 4
