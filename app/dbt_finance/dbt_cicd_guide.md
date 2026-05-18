@@ -361,7 +361,7 @@ on:
   push:                                        # 触发事件：push（包括 PR 合并）
     branches: [main]                           # 目标分支：main
     paths:
-      - 'dbt_finance/**'                       # 只有 dbt_finance 目录有变更才触发
+      - 'app/dbt_finance/**'                       # 只有 dbt_finance 目录有变更才触发
 
 env:
   SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
@@ -370,6 +370,7 @@ env:
   SNOWFLAKE_ROLE: ACCOUNTADMIN
   SNOWFLAKE_WAREHOUSE: COMPUTE_WH
   SNOWFLAKE_DATABASE: TEST_SNOWFLAKE_LEANING
+  DBT_PROFILES_DIR: ./app/dbt_finance
 
 jobs:
   dbt-cd:
