@@ -205,7 +205,7 @@ on:
   pull_request:                               # 触发事件：Pull Request
     branches: [main]                          # 目标分支：main
     paths:
-      - 'dbt_finance/**'                      # 只有 dbt_finance 目录有变更才触发
+      - 'app/dbt_finance/**'                      # 只有 dbt_finance 目录有变更才触发
 
 env:                                          # 全局环境变量，从 GitHub Secrets 注入
   SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
@@ -214,7 +214,7 @@ env:                                          # 全局环境变量，从 GitHub 
   SNOWFLAKE_ROLE: ACCOUNTADMIN
   SNOWFLAKE_WAREHOUSE: COMPUTE_WH
   SNOWFLAKE_DATABASE: TEST_SNOWFLAKE_LEANING
-  DBT_PROFILES_DIR: ./dbt_finance
+  DBT_PROFILES_DIR: ./app/dbt_finance
 
 jobs:
   dbt-ci:
