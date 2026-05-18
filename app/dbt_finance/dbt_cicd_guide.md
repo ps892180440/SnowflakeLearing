@@ -371,7 +371,7 @@ env:
   SNOWFLAKE_WAREHOUSE: COMPUTE_WH
   SNOWFLAKE_DATABASE: TEST_SNOWFLAKE_LEANING
   DBT_PROFILES_DIR: ./app/dbt_finance
-
+ 
 jobs:
   dbt-cd:
     name: dbt Run + Test (Prod)
