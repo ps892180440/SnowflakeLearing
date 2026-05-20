@@ -48,20 +48,45 @@ models:
           - not_null
 
   - name: stg_dim_account
-    description: "Cleaned account dimension with computed account age"
+    description: |
+      ## Account Dimension (Staging)
+
+      Cleaned and deduplicated account dimension table from source system.
+      Uses row_number to keep only the latest record per account_id.
+
+      ### Business Rules
+      - Deduplication: keeps latest record per account_id (by etl_updated_at)
+      - risk_level and account_type are uppercased and trimmed
+      - account_age_days is computed from open_date to current date
+
     columns:
       - name: account_key
+        description: "Surrogate key for the account record"
         tests:
           - unique
           - not_null
       - name: account_id
+        description: "Natural business key identifying the account"
         tests:
           - unique
           - not_null
+      - name: client_name
+        description: "Full name of the account holder"
       - name: risk_level
+        description: "Client risk classification (LOW, MEDIUM, HIGH)"
         tests:
           - accepted_values:
               values: ['LOW', 'MEDIUM', 'HIGH']
+      - name: account_type
+        description: "Type of trading account (e.g. INDIVIDUAL, INSTITUTIONAL)"
+      - name: open_date
+        description: "Date the account was opened"
+      - name: is_active
+        description: "Whether the account is currently active"
+      - name: account_age_days
+        description: "Number of days since the account was opened (computed field)"
+      - name: etl_updated_at
+        description: "Timestamp of the last ETL update for this record"
 
   - name: stg_dim_security
     description: "Cleaned security dimension with listing age"
