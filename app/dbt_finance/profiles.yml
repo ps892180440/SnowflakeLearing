@@ -3,8 +3,9 @@ dbt_finance:
   outputs:
     dev:
       type: snowflake
-      account: ""
-      user: ""
+      account: ogb30853
+      user: PENGB
+      password: Pengb@123.45678
       role: "ACCOUNTADMIN"
       database: "TEST_SNOWFLAKE_LEANING"
       warehouse: "COMPUTE_WH"
@@ -12,8 +13,9 @@ dbt_finance:
       threads: 4
     prod:
       type: snowflake
-      account: ""
-      user: ""
+      account: ogb30853
+      user: PENGB
+      password: Pengb@123.45678
       role: "ACCOUNTADMIN"
       database: "TEST_SNOWFLAKE_LEANING"
       warehouse: "COMPUTE_WH"

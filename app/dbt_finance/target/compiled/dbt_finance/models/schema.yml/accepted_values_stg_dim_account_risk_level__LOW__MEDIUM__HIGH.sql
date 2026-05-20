@@ -8,7 +8,7 @@ with all_values as (
         risk_level as value_field,
         count(*) as n_records
 
-    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_account
+    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.stg_dim_account
     group by risk_level
 
 )

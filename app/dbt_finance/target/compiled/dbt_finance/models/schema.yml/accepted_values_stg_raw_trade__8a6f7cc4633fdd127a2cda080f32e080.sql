@@ -8,7 +8,7 @@ with all_values as (
         status as value_field,
         count(*) as n_records
 
-    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_raw_trade_orders
+    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.stg_raw_trade_orders
     group by status
 
 )

@@ -23,8 +23,8 @@ select
     s.sector,
     s.industry
 
-from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_raw_trade_orders t
-left join TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_account a
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.stg_raw_trade_orders t
+left join TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.stg_dim_account a
     on t.account_id = a.account_id
-left join TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_security s
+left join TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.stg_dim_security s
     on t.symbol = s.symbol

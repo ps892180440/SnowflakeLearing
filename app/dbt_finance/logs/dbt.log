@@ -5487,3 +5487,797 @@ having count(*) > 1
 [0m01:56:52.974423 [debug] [Dummy-1   ]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 7.825198, "process_in_blocks": "0", "process_kernel_time": 1.01, "process_mem_max_rss": "472372", "process_out_blocks": "0", "process_user_time": 5.43}
 [0m01:56:52.975105 [debug] [Dummy-1   ]: Command `cli test` succeeded at 01:56:52.974837 after 7.83 seconds
 [0m01:56:52.975677 [debug] [Dummy-1   ]: Flushing usage events
+[0m10:53:54.379535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD4A9BAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD5BD8310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD5BD8690>]}
+
+
+============================== 10:53:54.419528 | 438634ca-4f51-4276-8699-0e70b54f872e ==============================
+[0m10:53:54.419528 [info ] [MainThread]: Running with dbt=1.11.10
+[0m10:53:54.419528 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'E:\\gitbub\\SnowflakeLearing\\app\\dbt_finance', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt docs generate', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'E:\\gitbub\\SnowflakeLearing\\app\\dbt_finance\\logs'}
+[0m10:53:55.486673 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m10:53:55.491577 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m10:53:55.491577 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m10:53:55.571450 [error] [MainThread]:  adapter: Invalid profile: 'user' is a required property.
+[0m10:53:55.952699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '438634ca-4f51-4276-8699-0e70b54f872e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD6AFEA10>]}
+[0m10:53:56.031752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '438634ca-4f51-4276-8699-0e70b54f872e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD3B523D0>]}
+[0m10:53:56.034772 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m10:53:56.984307 [debug] [MainThread]: checksum: 2f247960199844e016e6a527f21364251736722c6212f4b11e96849fe0fc9e96, vars: {}, profile: , target: , version: 1.11.10
+[0m10:53:57.186362 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m10:53:57.202176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '438634ca-4f51-4276-8699-0e70b54f872e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD3B6AD90>]}
+[0m10:54:01.053980 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'stg_raw_trade_orders' in package 'dbt_finance' (models\schema.yml). Arguments
+to generic tests should be nested under the `arguments` property.
+[0m10:54:01.053980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '438634ca-4f51-4276-8699-0e70b54f872e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD6FFEB10>]}
+[0m10:54:01.361882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '438634ca-4f51-4276-8699-0e70b54f872e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD7312850>]}
+[0m10:54:01.477484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '438634ca-4f51-4276-8699-0e70b54f872e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD7438DD0>]}
+[0m10:54:01.488739 [info ] [MainThread]: Found 9 models, 33 data tests, 5 sources, 528 macros
+[0m10:54:01.490374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '438634ca-4f51-4276-8699-0e70b54f872e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD72BB950>]}
+[0m10:54:01.494296 [info ] [MainThread]: 
+[0m10:54:01.494296 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:54:01.494296 [info ] [MainThread]: 
+[0m10:54:01.505147 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:54:01.510162 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV'
+[0m10:54:07.764591 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV"
+[0m10:54:07.764591 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV: show objects in TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "dbt_finance", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV"} */;
+[0m10:54:07.764591 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:54:08.376266 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: show objects in TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "dbt_finance", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV"} */;
+[0m10:54:08.376266 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m10:54:08.376266 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m10:54:08.384269 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m10:54:08.384269 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:54:08.384269 [debug] [MainThread]: Connection 'list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV' was left open.
+[0m10:54:08.384269 [debug] [MainThread]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV: No close available on handle
+[0m10:54:08.384269 [error] [MainThread]: Encountered an error:
+Database Error
+  251005: User is empty, but it must be provided unless authenticator is one of OAUTH_AUTHORIZATION_CODE, PAT_WITH_EXTERNAL_SESSION, PROGRAMMATIC_ACCESS_TOKEN, WORKLOAD_IDENTITY, NO_AUTH, OAUTH_CLIENT_CREDENTIALS, OAUTH.
+[0m10:54:08.394261 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 8 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m10:54:08.394261 [debug] [MainThread]: Command `dbt docs generate` failed at 10:54:08.394261 after 14.14 seconds
+[0m10:54:08.394261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD4AB2F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD6B23790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCD5B2C890>]}
+[0m10:54:08.400002 [debug] [MainThread]: Flushing usage events
+[0m10:54:09.681227 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:57:46.264032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EC39B450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EB31E7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EC463A50>]}
+
+
+============================== 10:57:46.264032 | e4d9cdee-d65e-4386-9475-9439468ec1b6 ==============================
+[0m10:57:46.264032 [info ] [MainThread]: Running with dbt=1.11.10
+[0m10:57:46.264032 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'E:\\gitbub\\SnowflakeLearing\\app\\dbt_finance', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs generate', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'E:\\gitbub\\SnowflakeLearing\\app\\dbt_finance\\logs'}
+[0m10:57:46.592666 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m10:57:46.592666 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m10:57:46.592666 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m10:57:46.746416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e4d9cdee-d65e-4386-9475-9439468ec1b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0ED3645D0>]}
+[0m10:57:46.790002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e4d9cdee-d65e-4386-9475-9439468ec1b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EA3B7B90>]}
+[0m10:57:46.792006 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m10:57:47.062060 [debug] [MainThread]: checksum: 2f247960199844e016e6a527f21364251736722c6212f4b11e96849fe0fc9e96, vars: {}, profile: , target: , version: 1.11.10
+[0m10:57:47.140932 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m10:57:47.156945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e4d9cdee-d65e-4386-9475-9439468ec1b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EA3CAD50>]}
+[0m10:57:48.264749 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'stg_raw_trade_orders' in package 'dbt_finance' (models\schema.yml). Arguments
+to generic tests should be nested under the `arguments` property.
+[0m10:57:48.264749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e4d9cdee-d65e-4386-9475-9439468ec1b6', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0ED3E7C50>]}
+[0m10:57:48.565676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e4d9cdee-d65e-4386-9475-9439468ec1b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EDB7A8D0>]}
+[0m10:57:48.597361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e4d9cdee-d65e-4386-9475-9439468ec1b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EDD5BF10>]}
+[0m10:57:48.597361 [info ] [MainThread]: Found 9 models, 33 data tests, 5 sources, 528 macros
+[0m10:57:48.599118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e4d9cdee-d65e-4386-9475-9439468ec1b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0ED681E50>]}
+[0m10:57:48.599118 [info ] [MainThread]: 
+[0m10:57:48.599118 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:57:48.599118 [info ] [MainThread]: 
+[0m10:57:48.599118 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:57:48.619058 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV'
+[0m10:57:48.756027 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV"
+[0m10:57:48.756027 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV: show objects in TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "dbt_finance", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV"} */;
+[0m10:57:48.756027 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:57:48.756027 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: show objects in TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "dbt_finance", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV"} */;
+[0m10:57:48.756027 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m10:57:48.756027 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m10:57:48.756027 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m10:57:48.756027 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:57:48.756027 [debug] [MainThread]: Connection 'list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV' was left open.
+[0m10:57:48.756027 [debug] [MainThread]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV: No close available on handle
+[0m10:57:48.756027 [error] [MainThread]: Encountered an error:
+Database Error
+  251006: Password is empty
+[0m10:57:48.771689 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 8 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m10:57:48.771689 [debug] [MainThread]: Command `dbt docs generate` failed at 10:57:48.771689 after 2.60 seconds
+[0m10:57:48.771689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EC39B190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EC39B0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EDD2B9D0>]}
+[0m10:57:48.771689 [debug] [MainThread]: Flushing usage events
+[0m10:57:49.926852 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:59:02.008906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC6549650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC654BAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC654A290>]}
+
+
+============================== 10:59:02.008906 | 417bcfd4-99e5-4f9a-b59f-ef1a6de9999a ==============================
+[0m10:59:02.008906 [info ] [MainThread]: Running with dbt=1.11.10
+[0m10:59:02.008906 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'E:\\gitbub\\SnowflakeLearing\\app\\dbt_finance', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt docs generate', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'E:\\gitbub\\SnowflakeLearing\\app\\dbt_finance\\logs'}
+[0m10:59:02.341874 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m10:59:02.341874 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m10:59:02.341874 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m10:59:02.496705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '417bcfd4-99e5-4f9a-b59f-ef1a6de9999a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC65B0C90>]}
+[0m10:59:02.540026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '417bcfd4-99e5-4f9a-b59f-ef1a6de9999a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC65F4050>]}
+[0m10:59:02.542031 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m10:59:02.804332 [debug] [MainThread]: checksum: 2f247960199844e016e6a527f21364251736722c6212f4b11e96849fe0fc9e96, vars: {}, profile: , target: , version: 1.11.10
+[0m10:59:02.928043 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:59:02.928043 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m10:59:02.928043 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:59:02.959927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '417bcfd4-99e5-4f9a-b59f-ef1a6de9999a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC79AD6D0>]}
+[0m10:59:02.975639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '417bcfd4-99e5-4f9a-b59f-ef1a6de9999a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC78701D0>]}
+[0m10:59:02.975639 [info ] [MainThread]: Found 9 models, 33 data tests, 5 sources, 528 macros
+[0m10:59:02.975639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '417bcfd4-99e5-4f9a-b59f-ef1a6de9999a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC79CC6D0>]}
+[0m10:59:02.991456 [info ] [MainThread]: 
+[0m10:59:02.993610 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:59:02.993610 [info ] [MainThread]: 
+[0m10:59:02.993610 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:59:02.993610 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV'
+[0m10:59:03.055033 [debug] [ThreadPool]: Using snowflake connection "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV"
+[0m10:59:03.055033 [debug] [ThreadPool]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV: show objects in TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "dbt_finance", "target_name": "dev", "connection_name": "list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV"} */;
+[0m10:59:03.055033 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:59:11.780022 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 8.714 seconds
+[0m10:59:11.780022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '417bcfd4-99e5-4f9a-b59f-ef1a6de9999a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC1CF2590>]}
+[0m10:59:11.866020 [debug] [Thread-2 (]: Began running node model.dbt_finance.stg_dim_account
+[0m10:59:11.866020 [debug] [Thread-3 (]: Began running node model.dbt_finance.stg_dim_security
+[0m10:59:11.866020 [debug] [Thread-4 (]: Began running node model.dbt_finance.stg_raw_fund_nav
+[0m10:59:11.875098 [debug] [Thread-5 (]: Began running node model.dbt_finance.stg_raw_stock_quotes
+[0m10:59:11.875098 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dbt_finance.stg_dim_account'
+[0m10:59:11.875098 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.dbt_finance.stg_dim_security'
+[0m10:59:11.875098 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_finance.stg_raw_fund_nav'
+[0m10:59:11.875098 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.dbt_finance.stg_raw_stock_quotes'
+[0m10:59:11.875098 [debug] [Thread-2 (]: Began compiling node model.dbt_finance.stg_dim_account
+[0m10:59:11.875098 [debug] [Thread-3 (]: Began compiling node model.dbt_finance.stg_dim_security
+[0m10:59:11.875098 [debug] [Thread-4 (]: Began compiling node model.dbt_finance.stg_raw_fund_nav
+[0m10:59:11.875098 [debug] [Thread-5 (]: Began compiling node model.dbt_finance.stg_raw_stock_quotes
+[0m10:59:11.906740 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finance.stg_dim_account"
+[0m10:59:11.906740 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_finance.stg_dim_security"
+[0m10:59:11.922540 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_finance.stg_raw_fund_nav"
+[0m10:59:11.922540 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_finance.stg_raw_stock_quotes"
+[0m10:59:11.922540 [debug] [Thread-3 (]: Began executing node model.dbt_finance.stg_dim_security
+[0m10:59:11.938357 [debug] [Thread-2 (]: Began executing node model.dbt_finance.stg_dim_account
+[0m10:59:11.938357 [debug] [Thread-4 (]: Began executing node model.dbt_finance.stg_raw_fund_nav
+[0m10:59:11.938357 [debug] [Thread-3 (]: Finished running node model.dbt_finance.stg_dim_security
+[0m10:59:11.938357 [debug] [Thread-5 (]: Began executing node model.dbt_finance.stg_raw_stock_quotes
+[0m10:59:11.946809 [debug] [Thread-2 (]: Finished running node model.dbt_finance.stg_dim_account
+[0m10:59:11.946809 [debug] [Thread-4 (]: Finished running node model.dbt_finance.stg_raw_fund_nav
+[0m10:59:11.946809 [debug] [Thread-3 (]: Began running node model.dbt_finance.stg_raw_trade_orders
+[0m10:59:11.954394 [debug] [Thread-5 (]: Finished running node model.dbt_finance.stg_raw_stock_quotes
+[0m10:59:11.954394 [debug] [Thread-2 (]: Began running node test.dbt_finance.not_null_stg_dim_security_security_key.d8109762eb
+[0m10:59:11.954394 [debug] [Thread-4 (]: Began running node test.dbt_finance.not_null_stg_dim_security_symbol.7bdb18d93f
+[0m10:59:11.954394 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_finance.stg_dim_security, now model.dbt_finance.stg_raw_trade_orders)
+[0m10:59:11.954394 [debug] [Thread-5 (]: Began running node test.dbt_finance.unique_stg_dim_security_security_key.73f52a6847
+[0m10:59:11.954394 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_finance.stg_dim_account, now test.dbt_finance.not_null_stg_dim_security_security_key.d8109762eb)
+[0m10:59:11.954394 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_finance.stg_raw_fund_nav, now test.dbt_finance.not_null_stg_dim_security_symbol.7bdb18d93f)
+[0m10:59:11.954394 [debug] [Thread-3 (]: Began compiling node model.dbt_finance.stg_raw_trade_orders
+[0m10:59:11.954394 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.dbt_finance.stg_raw_stock_quotes, now test.dbt_finance.unique_stg_dim_security_security_key.73f52a6847)
+[0m10:59:11.970101 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.not_null_stg_dim_security_security_key.d8109762eb
+[0m10:59:11.970101 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.not_null_stg_dim_security_symbol.7bdb18d93f
+[0m10:59:11.978860 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_finance.stg_raw_trade_orders"
+[0m10:59:11.985775 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.unique_stg_dim_security_security_key.73f52a6847
+[0m10:59:12.017859 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.not_null_stg_dim_security_security_key.d8109762eb"
+[0m10:59:12.033949 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.not_null_stg_dim_security_symbol.7bdb18d93f"
+[0m10:59:12.033949 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.unique_stg_dim_security_security_key.73f52a6847"
+[0m10:59:12.033949 [debug] [Thread-3 (]: Began executing node model.dbt_finance.stg_raw_trade_orders
+[0m10:59:12.033949 [debug] [Thread-2 (]: Began executing node test.dbt_finance.not_null_stg_dim_security_security_key.d8109762eb
+[0m10:59:12.033949 [debug] [Thread-4 (]: Began executing node test.dbt_finance.not_null_stg_dim_security_symbol.7bdb18d93f
+[0m10:59:12.050066 [debug] [Thread-3 (]: Finished running node model.dbt_finance.stg_raw_trade_orders
+[0m10:59:12.050066 [debug] [Thread-5 (]: Began executing node test.dbt_finance.unique_stg_dim_security_security_key.73f52a6847
+[0m10:59:12.050066 [debug] [Thread-2 (]: Finished running node test.dbt_finance.not_null_stg_dim_security_security_key.d8109762eb
+[0m10:59:12.050066 [debug] [Thread-4 (]: Finished running node test.dbt_finance.not_null_stg_dim_security_symbol.7bdb18d93f
+[0m10:59:12.050066 [debug] [Thread-3 (]: Began running node test.dbt_finance.unique_stg_dim_security_symbol.ffe139b55f
+[0m10:59:12.050066 [debug] [Thread-5 (]: Finished running node test.dbt_finance.unique_stg_dim_security_security_key.73f52a6847
+[0m10:59:12.050066 [debug] [Thread-2 (]: Began running node test.dbt_finance.accepted_values_stg_dim_account_risk_level__LOW__MEDIUM__HIGH.530b60fec8
+[0m10:59:12.050066 [debug] [Thread-4 (]: Began running node test.dbt_finance.not_null_stg_dim_account_account_id.e08784531f
+[0m10:59:12.066134 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_finance.stg_raw_trade_orders, now test.dbt_finance.unique_stg_dim_security_symbol.ffe139b55f)
+[0m10:59:12.066134 [debug] [Thread-5 (]: Began running node test.dbt_finance.not_null_stg_dim_account_account_key.f12db6ab35
+[0m10:59:12.066134 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_stg_dim_security_security_key.d8109762eb, now test.dbt_finance.accepted_values_stg_dim_account_risk_level__LOW__MEDIUM__HIGH.530b60fec8)
+[0m10:59:12.066134 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_stg_dim_security_symbol.7bdb18d93f, now test.dbt_finance.not_null_stg_dim_account_account_id.e08784531f)
+[0m10:59:12.066134 [debug] [Thread-3 (]: Began compiling node test.dbt_finance.unique_stg_dim_security_symbol.ffe139b55f
+[0m10:59:12.066134 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.dbt_finance.unique_stg_dim_security_security_key.73f52a6847, now test.dbt_finance.not_null_stg_dim_account_account_key.f12db6ab35)
+[0m10:59:12.066134 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.accepted_values_stg_dim_account_risk_level__LOW__MEDIUM__HIGH.530b60fec8
+[0m10:59:12.066134 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.not_null_stg_dim_account_account_id.e08784531f
+[0m10:59:12.082122 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_finance.unique_stg_dim_security_symbol.ffe139b55f"
+[0m10:59:12.082122 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.not_null_stg_dim_account_account_key.f12db6ab35
+[0m10:59:12.100681 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.accepted_values_stg_dim_account_risk_level__LOW__MEDIUM__HIGH.530b60fec8"
+[0m10:59:12.114018 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.not_null_stg_dim_account_account_id.e08784531f"
+[0m10:59:12.130110 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.not_null_stg_dim_account_account_key.f12db6ab35"
+[0m10:59:12.130110 [debug] [Thread-3 (]: Began executing node test.dbt_finance.unique_stg_dim_security_symbol.ffe139b55f
+[0m10:59:12.130110 [debug] [Thread-2 (]: Began executing node test.dbt_finance.accepted_values_stg_dim_account_risk_level__LOW__MEDIUM__HIGH.530b60fec8
+[0m10:59:12.130110 [debug] [Thread-4 (]: Began executing node test.dbt_finance.not_null_stg_dim_account_account_id.e08784531f
+[0m10:59:12.142400 [debug] [Thread-3 (]: Finished running node test.dbt_finance.unique_stg_dim_security_symbol.ffe139b55f
+[0m10:59:12.142400 [debug] [Thread-5 (]: Began executing node test.dbt_finance.not_null_stg_dim_account_account_key.f12db6ab35
+[0m10:59:12.146022 [debug] [Thread-2 (]: Finished running node test.dbt_finance.accepted_values_stg_dim_account_risk_level__LOW__MEDIUM__HIGH.530b60fec8
+[0m10:59:12.146022 [debug] [Thread-4 (]: Finished running node test.dbt_finance.not_null_stg_dim_account_account_id.e08784531f
+[0m10:59:12.146022 [debug] [Thread-3 (]: Began running node test.dbt_finance.unique_stg_dim_account_account_id.b4185e9c8a
+[0m10:59:12.146022 [debug] [Thread-5 (]: Finished running node test.dbt_finance.not_null_stg_dim_account_account_key.f12db6ab35
+[0m10:59:12.146022 [debug] [Thread-2 (]: Began running node test.dbt_finance.unique_stg_dim_account_account_key.24f70477e8
+[0m10:59:12.146022 [debug] [Thread-4 (]: Began running node test.dbt_finance.not_null_stg_raw_fund_nav_fund_code.6632e7c2c3
+[0m10:59:12.146022 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_finance.unique_stg_dim_security_symbol.ffe139b55f, now test.dbt_finance.unique_stg_dim_account_account_id.b4185e9c8a)
+[0m10:59:12.146022 [debug] [Thread-5 (]: Began running node test.dbt_finance.not_null_stg_raw_fund_nav_nav_date.ef8270eae0
+[0m10:59:12.146022 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_finance.accepted_values_stg_dim_account_risk_level__LOW__MEDIUM__HIGH.530b60fec8, now test.dbt_finance.unique_stg_dim_account_account_key.24f70477e8)
+[0m10:59:12.146022 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_stg_dim_account_account_id.e08784531f, now test.dbt_finance.not_null_stg_raw_fund_nav_fund_code.6632e7c2c3)
+[0m10:59:12.161762 [debug] [Thread-3 (]: Began compiling node test.dbt_finance.unique_stg_dim_account_account_id.b4185e9c8a
+[0m10:59:12.161762 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_stg_dim_account_account_key.f12db6ab35, now test.dbt_finance.not_null_stg_raw_fund_nav_nav_date.ef8270eae0)
+[0m10:59:12.161762 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.unique_stg_dim_account_account_key.24f70477e8
+[0m10:59:12.161762 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.not_null_stg_raw_fund_nav_fund_code.6632e7c2c3
+[0m10:59:12.161762 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_finance.unique_stg_dim_account_account_id.b4185e9c8a"
+[0m10:59:12.161762 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.not_null_stg_raw_fund_nav_nav_date.ef8270eae0
+[0m10:59:12.177564 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.unique_stg_dim_account_account_key.24f70477e8"
+[0m10:59:12.240587 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.not_null_stg_raw_fund_nav_fund_code.6632e7c2c3"
+[0m10:59:12.240587 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.not_null_stg_raw_fund_nav_nav_date.ef8270eae0"
+[0m10:59:12.240587 [debug] [Thread-3 (]: Began executing node test.dbt_finance.unique_stg_dim_account_account_id.b4185e9c8a
+[0m10:59:12.240587 [debug] [Thread-2 (]: Began executing node test.dbt_finance.unique_stg_dim_account_account_key.24f70477e8
+[0m10:59:12.240587 [debug] [Thread-4 (]: Began executing node test.dbt_finance.not_null_stg_raw_fund_nav_fund_code.6632e7c2c3
+[0m10:59:12.240587 [debug] [Thread-5 (]: Began executing node test.dbt_finance.not_null_stg_raw_fund_nav_nav_date.ef8270eae0
+[0m10:59:12.240587 [debug] [Thread-3 (]: Finished running node test.dbt_finance.unique_stg_dim_account_account_id.b4185e9c8a
+[0m10:59:12.240587 [debug] [Thread-2 (]: Finished running node test.dbt_finance.unique_stg_dim_account_account_key.24f70477e8
+[0m10:59:12.256500 [debug] [Thread-4 (]: Finished running node test.dbt_finance.not_null_stg_raw_fund_nav_fund_code.6632e7c2c3
+[0m10:59:12.259126 [debug] [Thread-5 (]: Finished running node test.dbt_finance.not_null_stg_raw_fund_nav_nav_date.ef8270eae0
+[0m10:59:12.259126 [debug] [Thread-3 (]: Began running node model.dbt_finance.mart_security_daily_performance
+[0m10:59:12.263485 [debug] [Thread-2 (]: Began running node test.dbt_finance.not_null_stg_raw_stock_quotes_symbol.92699082e2
+[0m10:59:12.263485 [debug] [Thread-4 (]: Began running node test.dbt_finance.not_null_stg_raw_stock_quotes_trade_date.ca8a10406c
+[0m10:59:12.263485 [debug] [Thread-5 (]: Began running node model.dbt_finance.int_trade_enriched
+[0m10:59:12.263485 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_finance.unique_stg_dim_account_account_id.b4185e9c8a, now model.dbt_finance.mart_security_daily_performance)
+[0m10:59:12.270162 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_finance.unique_stg_dim_account_account_key.24f70477e8, now test.dbt_finance.not_null_stg_raw_stock_quotes_symbol.92699082e2)
+[0m10:59:12.272178 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_stg_raw_fund_nav_fund_code.6632e7c2c3, now test.dbt_finance.not_null_stg_raw_stock_quotes_trade_date.ca8a10406c)
+[0m10:59:12.272178 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_stg_raw_fund_nav_nav_date.ef8270eae0, now model.dbt_finance.int_trade_enriched)
+[0m10:59:12.272178 [debug] [Thread-3 (]: Began compiling node model.dbt_finance.mart_security_daily_performance
+[0m10:59:12.272178 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.not_null_stg_raw_stock_quotes_symbol.92699082e2
+[0m10:59:12.272178 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.not_null_stg_raw_stock_quotes_trade_date.ca8a10406c
+[0m10:59:12.272178 [debug] [Thread-5 (]: Began compiling node model.dbt_finance.int_trade_enriched
+[0m10:59:12.288257 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_finance.mart_security_daily_performance"
+[0m10:59:12.290534 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.not_null_stg_raw_stock_quotes_symbol.92699082e2"
+[0m10:59:12.304016 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.not_null_stg_raw_stock_quotes_trade_date.ca8a10406c"
+[0m10:59:12.319813 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_finance.int_trade_enriched"
+[0m10:59:12.319813 [debug] [Thread-3 (]: Began executing node model.dbt_finance.mart_security_daily_performance
+[0m10:59:12.319813 [debug] [Thread-2 (]: Began executing node test.dbt_finance.not_null_stg_raw_stock_quotes_symbol.92699082e2
+[0m10:59:12.319813 [debug] [Thread-4 (]: Began executing node test.dbt_finance.not_null_stg_raw_stock_quotes_trade_date.ca8a10406c
+[0m10:59:12.330966 [debug] [Thread-3 (]: Finished running node model.dbt_finance.mart_security_daily_performance
+[0m10:59:12.330966 [debug] [Thread-5 (]: Began executing node model.dbt_finance.int_trade_enriched
+[0m10:59:12.335731 [debug] [Thread-2 (]: Finished running node test.dbt_finance.not_null_stg_raw_stock_quotes_symbol.92699082e2
+[0m10:59:12.335731 [debug] [Thread-4 (]: Finished running node test.dbt_finance.not_null_stg_raw_stock_quotes_trade_date.ca8a10406c
+[0m10:59:12.340029 [debug] [Thread-3 (]: Began running node test.dbt_finance.accepted_values_stg_raw_trade_orders_direction__BUY__SELL.d6d0f8e60e
+[0m10:59:12.340029 [debug] [Thread-5 (]: Finished running node model.dbt_finance.int_trade_enriched
+[0m10:59:12.340029 [debug] [Thread-2 (]: Began running node test.dbt_finance.accepted_values_stg_raw_trade_orders_order_type__LIMIT__MARKET.b2d921fb3f
+[0m10:59:12.340029 [debug] [Thread-4 (]: Began running node test.dbt_finance.accepted_values_stg_raw_trade_orders_status__FILLED__PARTIAL__CANCELLED.65213b3958
+[0m10:59:12.340029 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_finance.mart_security_daily_performance, now test.dbt_finance.accepted_values_stg_raw_trade_orders_direction__BUY__SELL.d6d0f8e60e)
+[0m10:59:12.340029 [debug] [Thread-5 (]: Began running node test.dbt_finance.not_null_stg_raw_trade_orders_order_id.f9af6bf111
+[0m10:59:12.351723 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_stg_raw_stock_quotes_symbol.92699082e2, now test.dbt_finance.accepted_values_stg_raw_trade_orders_order_type__LIMIT__MARKET.b2d921fb3f)
+[0m10:59:12.351723 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_stg_raw_stock_quotes_trade_date.ca8a10406c, now test.dbt_finance.accepted_values_stg_raw_trade_orders_status__FILLED__PARTIAL__CANCELLED.65213b3958)
+[0m10:59:12.351723 [debug] [Thread-3 (]: Began compiling node test.dbt_finance.accepted_values_stg_raw_trade_orders_direction__BUY__SELL.d6d0f8e60e
+[0m10:59:12.351723 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.dbt_finance.int_trade_enriched, now test.dbt_finance.not_null_stg_raw_trade_orders_order_id.f9af6bf111)
+[0m10:59:12.351723 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.accepted_values_stg_raw_trade_orders_order_type__LIMIT__MARKET.b2d921fb3f
+[0m10:59:12.351723 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.accepted_values_stg_raw_trade_orders_status__FILLED__PARTIAL__CANCELLED.65213b3958
+[0m10:59:12.367441 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_finance.accepted_values_stg_raw_trade_orders_direction__BUY__SELL.d6d0f8e60e"
+[0m10:59:12.367441 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.not_null_stg_raw_trade_orders_order_id.f9af6bf111
+[0m10:59:12.383491 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.accepted_values_stg_raw_trade_orders_order_type__LIMIT__MARKET.b2d921fb3f"
+[0m10:59:12.399323 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.accepted_values_stg_raw_trade_orders_status__FILLED__PARTIAL__CANCELLED.65213b3958"
+[0m10:59:12.415037 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.not_null_stg_raw_trade_orders_order_id.f9af6bf111"
+[0m10:59:12.415037 [debug] [Thread-3 (]: Began executing node test.dbt_finance.accepted_values_stg_raw_trade_orders_direction__BUY__SELL.d6d0f8e60e
+[0m10:59:12.415037 [debug] [Thread-2 (]: Began executing node test.dbt_finance.accepted_values_stg_raw_trade_orders_order_type__LIMIT__MARKET.b2d921fb3f
+[0m10:59:12.427176 [debug] [Thread-4 (]: Began executing node test.dbt_finance.accepted_values_stg_raw_trade_orders_status__FILLED__PARTIAL__CANCELLED.65213b3958
+[0m10:59:12.427176 [debug] [Thread-3 (]: Finished running node test.dbt_finance.accepted_values_stg_raw_trade_orders_direction__BUY__SELL.d6d0f8e60e
+[0m10:59:12.431055 [debug] [Thread-5 (]: Began executing node test.dbt_finance.not_null_stg_raw_trade_orders_order_id.f9af6bf111
+[0m10:59:12.431055 [debug] [Thread-2 (]: Finished running node test.dbt_finance.accepted_values_stg_raw_trade_orders_order_type__LIMIT__MARKET.b2d921fb3f
+[0m10:59:12.431055 [debug] [Thread-4 (]: Finished running node test.dbt_finance.accepted_values_stg_raw_trade_orders_status__FILLED__PARTIAL__CANCELLED.65213b3958
+[0m10:59:12.431055 [debug] [Thread-3 (]: Began running node test.dbt_finance.not_null_stg_raw_trade_orders_price.01fb5edd6b
+[0m10:59:12.431055 [debug] [Thread-5 (]: Finished running node test.dbt_finance.not_null_stg_raw_trade_orders_order_id.f9af6bf111
+[0m10:59:12.446823 [debug] [Thread-2 (]: Began running node test.dbt_finance.not_null_stg_raw_trade_orders_quantity.81806273ce
+[0m10:59:12.446823 [debug] [Thread-4 (]: Began running node test.dbt_finance.unique_stg_raw_trade_orders_order_id.9ac183a5ee
+[0m10:59:12.446823 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_finance.accepted_values_stg_raw_trade_orders_direction__BUY__SELL.d6d0f8e60e, now test.dbt_finance.not_null_stg_raw_trade_orders_price.01fb5edd6b)
+[0m10:59:12.446823 [debug] [Thread-5 (]: Began running node test.dbt_finance.accepted_values_mart_security_daily_performance_price_trend__STRONG_UP__UP__FLAT__DOWN__STRONG_DOWN.327f2efff7
+[0m10:59:12.446823 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_finance.accepted_values_stg_raw_trade_orders_order_type__LIMIT__MARKET.b2d921fb3f, now test.dbt_finance.not_null_stg_raw_trade_orders_quantity.81806273ce)
+[0m10:59:12.446823 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_finance.accepted_values_stg_raw_trade_orders_status__FILLED__PARTIAL__CANCELLED.65213b3958, now test.dbt_finance.unique_stg_raw_trade_orders_order_id.9ac183a5ee)
+[0m10:59:12.446823 [debug] [Thread-3 (]: Began compiling node test.dbt_finance.not_null_stg_raw_trade_orders_price.01fb5edd6b
+[0m10:59:12.446823 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_stg_raw_trade_orders_order_id.f9af6bf111, now test.dbt_finance.accepted_values_mart_security_daily_performance_price_trend__STRONG_UP__UP__FLAT__DOWN__STRONG_DOWN.327f2efff7)
+[0m10:59:12.446823 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.not_null_stg_raw_trade_orders_quantity.81806273ce
+[0m10:59:12.446823 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.unique_stg_raw_trade_orders_order_id.9ac183a5ee
+[0m10:59:12.462670 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_finance.not_null_stg_raw_trade_orders_price.01fb5edd6b"
+[0m10:59:12.462670 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.accepted_values_mart_security_daily_performance_price_trend__STRONG_UP__UP__FLAT__DOWN__STRONG_DOWN.327f2efff7
+[0m10:59:12.478790 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.not_null_stg_raw_trade_orders_quantity.81806273ce"
+[0m10:59:12.494591 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.unique_stg_raw_trade_orders_order_id.9ac183a5ee"
+[0m10:59:12.510574 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.accepted_values_mart_security_daily_performance_price_trend__STRONG_UP__UP__FLAT__DOWN__STRONG_DOWN.327f2efff7"
+[0m10:59:12.510574 [debug] [Thread-3 (]: Began executing node test.dbt_finance.not_null_stg_raw_trade_orders_price.01fb5edd6b
+[0m10:59:12.510574 [debug] [Thread-2 (]: Began executing node test.dbt_finance.not_null_stg_raw_trade_orders_quantity.81806273ce
+[0m10:59:12.510574 [debug] [Thread-4 (]: Began executing node test.dbt_finance.unique_stg_raw_trade_orders_order_id.9ac183a5ee
+[0m10:59:12.510574 [debug] [Thread-3 (]: Finished running node test.dbt_finance.not_null_stg_raw_trade_orders_price.01fb5edd6b
+[0m10:59:12.510574 [debug] [Thread-5 (]: Began executing node test.dbt_finance.accepted_values_mart_security_daily_performance_price_trend__STRONG_UP__UP__FLAT__DOWN__STRONG_DOWN.327f2efff7
+[0m10:59:12.526498 [debug] [Thread-2 (]: Finished running node test.dbt_finance.not_null_stg_raw_trade_orders_quantity.81806273ce
+[0m10:59:12.526498 [debug] [Thread-4 (]: Finished running node test.dbt_finance.unique_stg_raw_trade_orders_order_id.9ac183a5ee
+[0m10:59:12.526498 [debug] [Thread-3 (]: Began running node test.dbt_finance.accepted_values_mart_security_daily_performance_volume_tier__VERY_HIGH__HIGH__MEDIUM__LOW.7f5f297415
+[0m10:59:12.526498 [debug] [Thread-5 (]: Finished running node test.dbt_finance.accepted_values_mart_security_daily_performance_price_trend__STRONG_UP__UP__FLAT__DOWN__STRONG_DOWN.327f2efff7
+[0m10:59:12.526498 [debug] [Thread-2 (]: Began running node test.dbt_finance.not_null_mart_security_daily_performance_symbol.304c0f0e8a
+[0m10:59:12.526498 [debug] [Thread-4 (]: Began running node test.dbt_finance.not_null_mart_security_daily_performance_trade_date.520dc4e6eb
+[0m10:59:12.526498 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_stg_raw_trade_orders_price.01fb5edd6b, now test.dbt_finance.accepted_values_mart_security_daily_performance_volume_tier__VERY_HIGH__HIGH__MEDIUM__LOW.7f5f297415)
+[0m10:59:12.526498 [debug] [Thread-5 (]: Began running node model.dbt_finance.mart_client_trading_summary
+[0m10:59:12.526498 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_stg_raw_trade_orders_quantity.81806273ce, now test.dbt_finance.not_null_mart_security_daily_performance_symbol.304c0f0e8a)
+[0m10:59:12.526498 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_finance.unique_stg_raw_trade_orders_order_id.9ac183a5ee, now test.dbt_finance.not_null_mart_security_daily_performance_trade_date.520dc4e6eb)
+[0m10:59:12.526498 [debug] [Thread-3 (]: Began compiling node test.dbt_finance.accepted_values_mart_security_daily_performance_volume_tier__VERY_HIGH__HIGH__MEDIUM__LOW.7f5f297415
+[0m10:59:12.526498 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.dbt_finance.accepted_values_mart_security_daily_performance_price_trend__STRONG_UP__UP__FLAT__DOWN__STRONG_DOWN.327f2efff7, now model.dbt_finance.mart_client_trading_summary)
+[0m10:59:12.526498 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.not_null_mart_security_daily_performance_symbol.304c0f0e8a
+[0m10:59:12.526498 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.not_null_mart_security_daily_performance_trade_date.520dc4e6eb
+[0m10:59:12.542655 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_finance.accepted_values_mart_security_daily_performance_volume_tier__VERY_HIGH__HIGH__MEDIUM__LOW.7f5f297415"
+[0m10:59:12.542655 [debug] [Thread-5 (]: Began compiling node model.dbt_finance.mart_client_trading_summary
+[0m10:59:12.542655 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.not_null_mart_security_daily_performance_symbol.304c0f0e8a"
+[0m10:59:12.542655 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.not_null_mart_security_daily_performance_trade_date.520dc4e6eb"
+[0m10:59:12.558381 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_finance.mart_client_trading_summary"
+[0m10:59:12.558381 [debug] [Thread-3 (]: Began executing node test.dbt_finance.accepted_values_mart_security_daily_performance_volume_tier__VERY_HIGH__HIGH__MEDIUM__LOW.7f5f297415
+[0m10:59:12.558381 [debug] [Thread-2 (]: Began executing node test.dbt_finance.not_null_mart_security_daily_performance_symbol.304c0f0e8a
+[0m10:59:12.558381 [debug] [Thread-4 (]: Began executing node test.dbt_finance.not_null_mart_security_daily_performance_trade_date.520dc4e6eb
+[0m10:59:12.558381 [debug] [Thread-3 (]: Finished running node test.dbt_finance.accepted_values_mart_security_daily_performance_volume_tier__VERY_HIGH__HIGH__MEDIUM__LOW.7f5f297415
+[0m10:59:12.558381 [debug] [Thread-5 (]: Began executing node model.dbt_finance.mart_client_trading_summary
+[0m10:59:12.558381 [debug] [Thread-2 (]: Finished running node test.dbt_finance.not_null_mart_security_daily_performance_symbol.304c0f0e8a
+[0m10:59:12.558381 [debug] [Thread-4 (]: Finished running node test.dbt_finance.not_null_mart_security_daily_performance_trade_date.520dc4e6eb
+[0m10:59:12.574333 [debug] [Thread-3 (]: Began running node model.dbt_finance.mart_risk_exposure_report
+[0m10:59:12.574333 [debug] [Thread-5 (]: Finished running node model.dbt_finance.mart_client_trading_summary
+[0m10:59:12.574333 [debug] [Thread-2 (]: Began running node test.dbt_finance.not_null_int_trade_enriched_client_name.944715ff28
+[0m10:59:12.574333 [debug] [Thread-4 (]: Began running node test.dbt_finance.not_null_int_trade_enriched_order_id.752c3ca6fc
+[0m10:59:12.574333 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_finance.accepted_values_mart_security_daily_performance_volume_tier__VERY_HIGH__HIGH__MEDIUM__LOW.7f5f297415, now model.dbt_finance.mart_risk_exposure_report)
+[0m10:59:12.574333 [debug] [Thread-5 (]: Began running node test.dbt_finance.not_null_int_trade_enriched_symbol.201cdc7981
+[0m10:59:12.574333 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_mart_security_daily_performance_symbol.304c0f0e8a, now test.dbt_finance.not_null_int_trade_enriched_client_name.944715ff28)
+[0m10:59:12.574333 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_mart_security_daily_performance_trade_date.520dc4e6eb, now test.dbt_finance.not_null_int_trade_enriched_order_id.752c3ca6fc)
+[0m10:59:12.574333 [debug] [Thread-3 (]: Began compiling node model.dbt_finance.mart_risk_exposure_report
+[0m10:59:12.574333 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.dbt_finance.mart_client_trading_summary, now test.dbt_finance.not_null_int_trade_enriched_symbol.201cdc7981)
+[0m10:59:12.589926 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.not_null_int_trade_enriched_client_name.944715ff28
+[0m10:59:12.589926 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.not_null_int_trade_enriched_order_id.752c3ca6fc
+[0m10:59:12.589926 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_finance.mart_risk_exposure_report"
+[0m10:59:12.589926 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.not_null_int_trade_enriched_symbol.201cdc7981
+[0m10:59:12.605813 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.not_null_int_trade_enriched_client_name.944715ff28"
+[0m10:59:12.621879 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.not_null_int_trade_enriched_order_id.752c3ca6fc"
+[0m10:59:12.637923 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.not_null_int_trade_enriched_symbol.201cdc7981"
+[0m10:59:12.637923 [debug] [Thread-3 (]: Began executing node model.dbt_finance.mart_risk_exposure_report
+[0m10:59:12.637923 [debug] [Thread-2 (]: Began executing node test.dbt_finance.not_null_int_trade_enriched_client_name.944715ff28
+[0m10:59:12.637923 [debug] [Thread-4 (]: Began executing node test.dbt_finance.not_null_int_trade_enriched_order_id.752c3ca6fc
+[0m10:59:12.637923 [debug] [Thread-3 (]: Finished running node model.dbt_finance.mart_risk_exposure_report
+[0m10:59:12.637923 [debug] [Thread-5 (]: Began executing node test.dbt_finance.not_null_int_trade_enriched_symbol.201cdc7981
+[0m10:59:12.637923 [debug] [Thread-2 (]: Finished running node test.dbt_finance.not_null_int_trade_enriched_client_name.944715ff28
+[0m10:59:12.653638 [debug] [Thread-4 (]: Finished running node test.dbt_finance.not_null_int_trade_enriched_order_id.752c3ca6fc
+[0m10:59:12.653638 [debug] [Thread-3 (]: Began running node test.dbt_finance.relationships_int_trade_enriched_symbol__symbol__ref_stg_dim_security_.75285f5800
+[0m10:59:12.653638 [debug] [Thread-5 (]: Finished running node test.dbt_finance.not_null_int_trade_enriched_symbol.201cdc7981
+[0m10:59:12.653638 [debug] [Thread-2 (]: Began running node test.dbt_finance.unique_int_trade_enriched_order_id.46a62da788
+[0m10:59:12.653638 [debug] [Thread-4 (]: Began running node test.dbt_finance.not_null_mart_client_trading_summary_account_id.01eec252c5
+[0m10:59:12.653638 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_finance.mart_risk_exposure_report, now test.dbt_finance.relationships_int_trade_enriched_symbol__symbol__ref_stg_dim_security_.75285f5800)
+[0m10:59:12.653638 [debug] [Thread-5 (]: Began running node test.dbt_finance.not_null_mart_client_trading_summary_fill_rate_pct.db47f0f943
+[0m10:59:12.653638 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_int_trade_enriched_client_name.944715ff28, now test.dbt_finance.unique_int_trade_enriched_order_id.46a62da788)
+[0m10:59:12.653638 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_int_trade_enriched_order_id.752c3ca6fc, now test.dbt_finance.not_null_mart_client_trading_summary_account_id.01eec252c5)
+[0m10:59:12.653638 [debug] [Thread-3 (]: Began compiling node test.dbt_finance.relationships_int_trade_enriched_symbol__symbol__ref_stg_dim_security_.75285f5800
+[0m10:59:12.669520 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.dbt_finance.not_null_int_trade_enriched_symbol.201cdc7981, now test.dbt_finance.not_null_mart_client_trading_summary_fill_rate_pct.db47f0f943)
+[0m10:59:12.669520 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.unique_int_trade_enriched_order_id.46a62da788
+[0m10:59:12.669520 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.not_null_mart_client_trading_summary_account_id.01eec252c5
+[0m10:59:12.685373 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_finance.relationships_int_trade_enriched_symbol__symbol__ref_stg_dim_security_.75285f5800"
+[0m10:59:12.685373 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.not_null_mart_client_trading_summary_fill_rate_pct.db47f0f943
+[0m10:59:12.701069 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.unique_int_trade_enriched_order_id.46a62da788"
+[0m10:59:12.716879 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.not_null_mart_client_trading_summary_account_id.01eec252c5"
+[0m10:59:12.716879 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.not_null_mart_client_trading_summary_fill_rate_pct.db47f0f943"
+[0m10:59:12.716879 [debug] [Thread-3 (]: Began executing node test.dbt_finance.relationships_int_trade_enriched_symbol__symbol__ref_stg_dim_security_.75285f5800
+[0m10:59:12.732773 [debug] [Thread-2 (]: Began executing node test.dbt_finance.unique_int_trade_enriched_order_id.46a62da788
+[0m10:59:12.732773 [debug] [Thread-4 (]: Began executing node test.dbt_finance.not_null_mart_client_trading_summary_account_id.01eec252c5
+[0m10:59:12.736590 [debug] [Thread-3 (]: Finished running node test.dbt_finance.relationships_int_trade_enriched_symbol__symbol__ref_stg_dim_security_.75285f5800
+[0m10:59:12.736590 [debug] [Thread-5 (]: Began executing node test.dbt_finance.not_null_mart_client_trading_summary_fill_rate_pct.db47f0f943
+[0m10:59:12.736590 [debug] [Thread-2 (]: Finished running node test.dbt_finance.unique_int_trade_enriched_order_id.46a62da788
+[0m10:59:12.736590 [debug] [Thread-4 (]: Finished running node test.dbt_finance.not_null_mart_client_trading_summary_account_id.01eec252c5
+[0m10:59:12.736590 [debug] [Thread-3 (]: Began running node test.dbt_finance.accepted_values_mart_risk_exposure_report_exposure_level__HIGH__MEDIUM__LOW.8239039400
+[0m10:59:12.736590 [debug] [Thread-5 (]: Finished running node test.dbt_finance.not_null_mart_client_trading_summary_fill_rate_pct.db47f0f943
+[0m10:59:12.748833 [debug] [Thread-2 (]: Began running node test.dbt_finance.not_null_mart_risk_exposure_report_account_id.c6dfdf740c
+[0m10:59:12.748833 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_finance.relationships_int_trade_enriched_symbol__symbol__ref_stg_dim_security_.75285f5800, now test.dbt_finance.accepted_values_mart_risk_exposure_report_exposure_level__HIGH__MEDIUM__LOW.8239039400)
+[0m10:59:12.748833 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_finance.unique_int_trade_enriched_order_id.46a62da788, now test.dbt_finance.not_null_mart_risk_exposure_report_account_id.c6dfdf740c)
+[0m10:59:12.754645 [debug] [Thread-3 (]: Began compiling node test.dbt_finance.accepted_values_mart_risk_exposure_report_exposure_level__HIGH__MEDIUM__LOW.8239039400
+[0m10:59:12.754645 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.not_null_mart_risk_exposure_report_account_id.c6dfdf740c
+[0m10:59:12.768674 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_finance.accepted_values_mart_risk_exposure_report_exposure_level__HIGH__MEDIUM__LOW.8239039400"
+[0m10:59:12.782601 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.not_null_mart_risk_exposure_report_account_id.c6dfdf740c"
+[0m10:59:12.785605 [debug] [Thread-3 (]: Began executing node test.dbt_finance.accepted_values_mart_risk_exposure_report_exposure_level__HIGH__MEDIUM__LOW.8239039400
+[0m10:59:12.787556 [debug] [Thread-2 (]: Began executing node test.dbt_finance.not_null_mart_risk_exposure_report_account_id.c6dfdf740c
+[0m10:59:12.789623 [debug] [Thread-3 (]: Finished running node test.dbt_finance.accepted_values_mart_risk_exposure_report_exposure_level__HIGH__MEDIUM__LOW.8239039400
+[0m10:59:12.792602 [debug] [Thread-2 (]: Finished running node test.dbt_finance.not_null_mart_risk_exposure_report_account_id.c6dfdf740c
+[0m10:59:12.796553 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:59:12.798600 [debug] [MainThread]: Connection 'list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV' was left open.
+[0m10:59:12.799602 [debug] [MainThread]: On list_TEST_SNOWFLAKE_LEANING_SCHM_F_SNOWLEARN_DEV: Close
+[0m10:59:13.915426 [debug] [MainThread]: Connection 'test.dbt_finance.not_null_mart_risk_exposure_report_account_id.c6dfdf740c' was properly closed.
+[0m10:59:13.915426 [debug] [MainThread]: Connection 'test.dbt_finance.accepted_values_mart_risk_exposure_report_exposure_level__HIGH__MEDIUM__LOW.8239039400' was properly closed.
+[0m10:59:13.915426 [debug] [MainThread]: Connection 'test.dbt_finance.not_null_mart_client_trading_summary_account_id.01eec252c5' was properly closed.
+[0m10:59:13.930776 [debug] [MainThread]: Connection 'test.dbt_finance.not_null_mart_client_trading_summary_fill_rate_pct.db47f0f943' was properly closed.
+[0m10:59:13.932556 [debug] [MainThread]: Command end result
+[0m10:59:14.137064 [debug] [MainThread]: Wrote artifact WritableManifest to E:\gitbub\SnowflakeLearing\app\dbt_finance\target\manifest.json
+[0m10:59:14.178383 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\gitbub\SnowflakeLearing\app\dbt_finance\target\semantic_manifest.json
+[0m10:59:14.184720 [debug] [MainThread]: Wrote artifact RunExecutionResult to E:\gitbub\SnowflakeLearing\app\dbt_finance\target\run_results.json
+[0m10:59:14.403954 [debug] [MainThread]: Acquiring new snowflake connection 'generate_catalog'
+[0m10:59:14.403954 [info ] [MainThread]: Building catalog
+[0m10:59:14.437772 [debug] [ThreadPool]: Acquiring new snowflake connection 'TEST_SNOWFLAKE_LEANING.information_schema'
+[0m10:59:14.469763 [debug] [ThreadPool]: Using snowflake connection "TEST_SNOWFLAKE_LEANING.information_schema"
+[0m10:59:14.469763 [debug] [ThreadPool]: On TEST_SNOWFLAKE_LEANING.information_schema: with tables as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+        case
+            when is_dynamic = 'YES' and table_type = 'BASE TABLE' THEN 'DYNAMIC TABLE'
+            else table_type
+        end as "table_type",
+        comment as "table_comment",
+
+        -- note: this is the _role_ that owns the table
+        table_owner as "table_owner",
+
+        'Clustering Key' as "stats:clustering_key:label",
+        clustering_key as "stats:clustering_key:value",
+        'The key used to cluster this table' as "stats:clustering_key:description",
+        (clustering_key is not null) as "stats:clustering_key:include",
+
+        'Row Count' as "stats:row_count:label",
+        row_count as "stats:row_count:value",
+        'An approximate count of rows in this table' as "stats:row_count:description",
+        (row_count is not null) as "stats:row_count:include",
+
+        'Approximate Size' as "stats:bytes:label",
+        bytes as "stats:bytes:value",
+        'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+        (bytes is not null) as "stats:bytes:include",
+
+        'Last Modified' as "stats:last_modified:label",
+        to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+        'The timestamp for last update/change' as "stats:last_modified:description",
+        (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+    from TEST_SNOWFLAKE_LEANING.INFORMATION_SCHEMA.tables
+            where (
+                (
+                    
+    "table_schema" ilike 'SCHM_L_SNOWLEARN_01' and upper("table_schema") = upper('SCHM_L_SNOWLEARN_01')
+
+                    and 
+    "table_name" ilike 'RAW_TRADE_ORDERS' and upper("table_name") = upper('RAW_TRADE_ORDERS')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'mart_security_daily_performance' and upper("table_name") = upper('mart_security_daily_performance')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'stg_dim_account' and upper("table_name") = upper('stg_dim_account')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_L_SNOWLEARN_01' and upper("table_schema") = upper('SCHM_L_SNOWLEARN_01')
+
+                    and 
+    "table_name" ilike 'RAW_STOCK_QUOTES' and upper("table_name") = upper('RAW_STOCK_QUOTES')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'int_trade_enriched' and upper("table_name") = upper('int_trade_enriched')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'mart_risk_exposure_report' and upper("table_name") = upper('mart_risk_exposure_report')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_L_SNOWLEARN_01' and upper("table_schema") = upper('SCHM_L_SNOWLEARN_01')
+
+                    and 
+    "table_name" ilike 'RAW_FUND_NAV' and upper("table_name") = upper('RAW_FUND_NAV')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'stg_raw_trade_orders' and upper("table_name") = upper('stg_raw_trade_orders')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'stg_raw_fund_nav' and upper("table_name") = upper('stg_raw_fund_nav')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_01' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_01')
+
+                    and 
+    "table_name" ilike 'DIM_SECURITY' and upper("table_name") = upper('DIM_SECURITY')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'mart_client_trading_summary' and upper("table_name") = upper('mart_client_trading_summary')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'stg_raw_stock_quotes' and upper("table_name") = upper('stg_raw_stock_quotes')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_01' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_01')
+
+                    and 
+    "table_name" ilike 'DIM_ACCOUNT' and upper("table_name") = upper('DIM_ACCOUNT')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'stg_dim_security' and upper("table_name") = upper('stg_dim_security')
+
+                )
+            )
+        ),
+        columns as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+
+        column_name as "column_name",
+        ordinal_position as "column_index",
+        data_type as "column_type",
+        comment as "column_comment"
+    from TEST_SNOWFLAKE_LEANING.INFORMATION_SCHEMA.columns
+            where (
+                (
+                    
+    "table_schema" ilike 'SCHM_L_SNOWLEARN_01' and upper("table_schema") = upper('SCHM_L_SNOWLEARN_01')
+
+                    and 
+    "table_name" ilike 'RAW_TRADE_ORDERS' and upper("table_name") = upper('RAW_TRADE_ORDERS')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'mart_security_daily_performance' and upper("table_name") = upper('mart_security_daily_performance')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'stg_dim_account' and upper("table_name") = upper('stg_dim_account')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_L_SNOWLEARN_01' and upper("table_schema") = upper('SCHM_L_SNOWLEARN_01')
+
+                    and 
+    "table_name" ilike 'RAW_STOCK_QUOTES' and upper("table_name") = upper('RAW_STOCK_QUOTES')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'int_trade_enriched' and upper("table_name") = upper('int_trade_enriched')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'mart_risk_exposure_report' and upper("table_name") = upper('mart_risk_exposure_report')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_L_SNOWLEARN_01' and upper("table_schema") = upper('SCHM_L_SNOWLEARN_01')
+
+                    and 
+    "table_name" ilike 'RAW_FUND_NAV' and upper("table_name") = upper('RAW_FUND_NAV')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'stg_raw_trade_orders' and upper("table_name") = upper('stg_raw_trade_orders')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'stg_raw_fund_nav' and upper("table_name") = upper('stg_raw_fund_nav')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_01' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_01')
+
+                    and 
+    "table_name" ilike 'DIM_SECURITY' and upper("table_name") = upper('DIM_SECURITY')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'mart_client_trading_summary' and upper("table_name") = upper('mart_client_trading_summary')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'stg_raw_stock_quotes' and upper("table_name") = upper('stg_raw_stock_quotes')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_01' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_01')
+
+                    and 
+    "table_name" ilike 'DIM_ACCOUNT' and upper("table_name") = upper('DIM_ACCOUNT')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SCHM_F_SNOWLEARN_DEV' and upper("table_schema") = upper('SCHM_F_SNOWLEARN_DEV')
+
+                    and 
+    "table_name" ilike 'stg_dim_security' and upper("table_name") = upper('stg_dim_security')
+
+                )
+            )
+        )
+        select *
+    from tables
+    join columns using ("table_database", "table_schema", "table_name")
+    order by "column_index"
+/* {"app": "dbt", "dbt_version": "1.11.10", "profile_name": "dbt_finance", "target_name": "dev", "connection_name": "TEST_SNOWFLAKE_LEANING.information_schema"} */
+[0m10:59:14.469763 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:59:21.133207 [debug] [ThreadPool]: SQL status: SUCCESS 163 in 6.658 seconds
+[0m10:59:22.343603 [debug] [MainThread]: Wrote artifact CatalogArtifact to E:\gitbub\SnowflakeLearing\app\dbt_finance\target\catalog.json
+[0m10:59:22.390899 [debug] [MainThread]: Wrote artifact WritableManifest to E:\gitbub\SnowflakeLearing\app\dbt_finance\target\manifest.json
+[0m10:59:22.390899 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\gitbub\SnowflakeLearing\app\dbt_finance\target\semantic_manifest.json
+[0m10:59:22.390899 [info ] [MainThread]: Catalog written to E:\gitbub\SnowflakeLearing\app\dbt_finance\target\catalog.json
+[0m10:59:22.390899 [debug] [MainThread]: Command `dbt docs generate` succeeded at 10:59:22.390899 after 20.45 seconds
+[0m10:59:22.390899 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m10:59:22.390899 [debug] [MainThread]: Connection 'TEST_SNOWFLAKE_LEANING.information_schema' was left open.
+[0m10:59:22.390899 [debug] [MainThread]: On TEST_SNOWFLAKE_LEANING.information_schema: Close
+[0m10:59:22.848767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC54AB950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC6578550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEC7A8F390>]}
+[0m10:59:22.848767 [debug] [MainThread]: Flushing usage events
+[0m10:59:24.064948 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:00:10.772579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C20560B1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2043DD250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C205673ED0>]}
+
+
+============================== 11:00:10.772579 | 49a0e3fc-5806-4967-a540-eda0513e5ac6 ==============================
+[0m11:00:10.772579 [info ] [MainThread]: Running with dbt=1.11.10
+[0m11:00:10.772579 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'E:\\gitbub\\SnowflakeLearing\\app\\dbt_finance', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs serve --port 8080', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'E:\\gitbub\\SnowflakeLearing\\app\\dbt_finance\\logs'}
+[0m11:00:11.111069 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m11:00:11.111069 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m11:00:11.111069 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m11:00:11.253416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '49a0e3fc-5806-4967-a540-eda0513e5ac6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2065AF6D0>]}
+[0m11:00:11.308348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '49a0e3fc-5806-4967-a540-eda0513e5ac6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C205654950>]}
+[0m11:01:11.194186 [error] [MainThread]: Encountered an error:
+
+[0m11:01:11.261003 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\pengb\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pengb\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pengb\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pengb\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pengb\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pengb\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\main.py", line 309, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\pengb\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\pengb\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pengb\AppData\Local\Programs\Python\Python311\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pengb\AppData\Local\Programs\Python\Python311\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m11:01:11.265216 [debug] [MainThread]: Command `dbt docs serve` failed at 11:01:11.265216 after 60.56 seconds
+[0m11:01:11.265216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C205674D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C205674AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2055FFE90>]}
+[0m11:01:11.266256 [debug] [MainThread]: Flushing usage events
+[0m11:01:12.343916 [debug] [MainThread]: An error was encountered while trying to flush usage events

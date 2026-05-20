@@ -30,6 +30,6 @@ select
         else 'LOW'
     end as volume_tier
 
-from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_raw_stock_quotes q
-left join TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_security s
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.stg_raw_stock_quotes q
+left join TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.stg_dim_security s
     on q.symbol = s.symbol

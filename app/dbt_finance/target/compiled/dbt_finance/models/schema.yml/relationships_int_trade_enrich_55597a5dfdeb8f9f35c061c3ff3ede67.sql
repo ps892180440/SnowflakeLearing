@@ -4,13 +4,13 @@
 
 with child as (
     select symbol as from_field
-    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.int_trade_enriched
+    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.int_trade_enriched
     where symbol is not null
 ),
 
 parent as (
     select symbol as to_field
-    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.stg_dim_security
+    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.stg_dim_security
 )
 
 select

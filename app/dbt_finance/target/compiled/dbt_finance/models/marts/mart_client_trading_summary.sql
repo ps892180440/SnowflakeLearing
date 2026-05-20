@@ -28,6 +28,6 @@ select
     max(order_date) as last_trade_date,
     datediff('day', min(order_date), max(order_date)) as active_trading_days_span
 
-from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.int_trade_enriched
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.int_trade_enriched
 where account_id is not null
 group by account_id, client_name, risk_level, account_type

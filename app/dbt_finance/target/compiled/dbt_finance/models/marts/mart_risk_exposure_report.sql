@@ -34,7 +34,7 @@ select
     count(distinct t.order_id) as trade_count,
     max(t.order_date) as last_trade_date
 
-from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.int_trade_enriched t
+from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.int_trade_enriched t
 where t.status in ('FILLED', 'PARTIAL')
 group by
     t.account_id, t.client_name, t.risk_level, t.account_type,

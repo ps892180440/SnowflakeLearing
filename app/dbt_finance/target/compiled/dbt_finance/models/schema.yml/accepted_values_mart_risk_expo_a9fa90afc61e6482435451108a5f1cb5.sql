@@ -8,7 +8,7 @@ with all_values as (
         exposure_level as value_field,
         count(*) as n_records
 
-    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_01.mart_risk_exposure_report
+    from TEST_SNOWFLAKE_LEANING.SCHM_F_SNOWLEARN_DEV.mart_risk_exposure_report
     group by exposure_level
 
 )
