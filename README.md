@@ -1,7 +1,7 @@
 # SnowflakeLearing
 For Snowflake Learing
 <p align="center">
-  <img src="https://www.snowflake.com/wp-content/themes/snowflake/assets/img/logo.svg" alt="Snowflake Logo" width="360"/>
+  <img src="https://www.vectorlogo.zone/logos/snowflake/snowflake-ar21.svg" alt="Snowflake Logo" width="360"/>
 </p>
 
 <p align="center">
@@ -121,13 +121,13 @@ flowchart LR
   <table>
     <tr>
       <td align="center" width="33%">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snowflake_Logo.svg/320px-Snowflake_Logo.svg.png" width="140"/><br/>
+        <img src="https://www.vectorlogo.zone/logos/snowflake/snowflake-icon.svg" width="80"/><br/>
         <b>Snowflake</b><br/>
         Cloud Data Platform<br/>
         <sub>Enterprise Edition ↑</sub>
       </td>
       <td align="center" width="33%">
-        <img src="https://avatars.githubusercontent.com/u/50550476?s=200&v=4" width="80"/><br/>
+        <img src="https://www.vectorlogo.zone/logos/getdbt/getdbt-icon.svg" width="80"/><br/>
         <b>dbt Core</b><br/>
         Data Transformation<br/>
         <sub>v1.9+ · dbt-snowflake</sub>
@@ -209,3 +209,4 @@ Merge → dbt build (prod) → Run dbt snapshots → Notify
 <p align="center">
   <sub>Built with ❄ for fast-paced data teams · Updated 2026-05-21</sub>
 </p>
+
